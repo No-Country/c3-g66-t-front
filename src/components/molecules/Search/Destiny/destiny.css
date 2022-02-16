@@ -1,0 +1,30 @@
+.container-destiny{
+    @apply
+    col-span-2
+    flex flex-row justify-around items-center
+    border border-details border-opacity-60
+    rounded-xl
+    h-4/6 w-full
+    md:col-span-2
+    lg:mt-4 lg:border-r-0 lg:rounded-r-none;
+}
+.container-input-destiny{
+    @apply
+    flex justify-center items-center w-10/12 h-full;
+}
+.title-destiny{
+    @apply 
+    text-details font-medium text-xs text-opacity-60
+    flex flex-col w-full mt-1 p-2
+    lg:text-sm;
+}
+.destiny-value{
+    @apply
+    bg-transparent border-b text-white mb-2 text-sm
+    focus:outline-none
+    lg:mb-1
+    xl:text-base xl:mb-2; 
+}
+.iconWorld{
+    @apply text-details text-3xl opacity-60;
+}

@@ -1,0 +1,17 @@
+.container-search-button{
+    @apply h-4/6 w-full col-span-2 
+    sm:ml-0.5 sm:mt-0.5
+    lg:ml-2 lg:mt-4 lg:h-4/6 lg:col-span-1
+    xl:mt-4;
+}
+.search-button{
+    @apply
+    h-full w-full
+    bg-search text-sm text-white font-medium
+    border border-transparent rounded-xl
+    hover:text-search hover:bg-details hover:border-search
+    ease-in-out duration-500
+    sm:text-base
+    lg:text-sm
+    xl:text-base;
+}
