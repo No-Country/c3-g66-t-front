@@ -1,9 +1,9 @@
-
+import Navbar from "../../components/organisms/Navbar/Navbar";
 
 const Home = () => {
     return (
         <div>
-            <p>Home</p>
+            <Navbar />
         </div>
     )
 }
