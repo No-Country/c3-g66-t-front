@@ -5,7 +5,7 @@ const MenuItems = ({showMenu, show}) =>{
     return(
       <>
         
-               <ul className={show ? "flex-col flex items-center fixed inset-0 left-1/4 gap-8 justify-center p-8 bg-black/20 backdrop-blur-lg md:hidden" : "hidden"}>
+               <ul className={show ? "flex-col flex items-center fixed inset-0 left-1/4 gap-8 justify-center p-8 bg-black/20 backdrop-blur-lg  md:hidden" : "hidden"}>
                  <Close onClick={showMenu} className="courser-pointer"/>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/">Alojamiento</Link></li>

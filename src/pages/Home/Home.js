@@ -7,7 +7,7 @@ import './home.css';
 
 const Home = () => {
     return (
-        <div>
+        <div className="">
             <div className="">
               <Navbar />
               <Section /> 
