@@ -1,4 +1,4 @@
-//import Search from "../../components/organisms/Search/Search";
+import Search from "../../components/organisms/Search/Search";
 import Navbar from "../../components/organisms/Navbar/Navbar";
 import Section from "../../components/organisms/Section/Section";
 import './home.css';
@@ -11,15 +11,13 @@ const Home = () => {
             <div className="">
               <Navbar />
               <Section /> 
-            </div>
-            <p>Home</p>
-            
+            </div>           
             
             <div className="fondoDeMuestra">
                 
-                
+            <Search/>
+
             </div>
-            
         </div>
     )
 }

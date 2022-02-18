@@ -1,7 +1,6 @@
 
-//Hola, te lo comenté porque me estaba tirando error.
 
-/*import './search.css';
+import './search.css';
 import ButtonSearch from '../../atoms/Buttons/Search/ButtonSearch';
 import InputDestiny from '../../molecules/Search/Destiny/InputDestiny';
 import InputGuests from '../../molecules/Search/Guests/InputGuests';
@@ -23,4 +22,4 @@ const Search = () => {
 }
 
 export default Search;
-*/
+
