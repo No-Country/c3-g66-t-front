@@ -507,22 +507,19 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-3{
   top: 0.75rem;
 }
-.m-10{
-  margin: 2.5rem;
-}
 .m-auto{
   margin: auto;
 }
 .m-5{
   margin: 1.25rem;
 }
-.mx-24{
-  margin-left: 6rem;
-  margin-right: 6rem;
-}
 .my-5{
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+.mx-5{
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
 }
 .mb-3{
   margin-bottom: 0.75rem;
@@ -563,20 +560,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-8{
   height: 2rem;
 }
-.w-3\/5{
-  width: 60%;
+.min-h-screen{
+  min-height: 100vh;
 }
-.w-2\/5{
-  width: 40%;
+.w-0{
+  width: 0px;
 }
 .w-full{
   width: 100%;
 }
 .w-36{
   width: 9rem;
-}
-.w-1\/3{
-  width: 33.333333%;
 }
 .w-1\/2{
   width: 50%;
@@ -658,14 +652,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-black\/20{
   background-color: rgb(0 0 0 / 0.2);
 }
-.bg-\[url\(\'https\:\/\/imgcy\.trivago\.com\/c_limit\2c d_dummy\.jpeg\2c f_auto\2c h_1300\2c q_auto\2c w_2000\/itemimages\/20\/08\/2008427_v4\.jpeg\'\)\]{
-  background-image: url('https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/20/08/2008427_v4.jpeg');
+.bg-background-login{
+  background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/20/08/2008427_v4.jpeg");
 }
 .bg-\[url\(\'https\:\/\/i0\.wp\.com\/foodandpleasure\.com\/wp-content\/uploads\/2018\/04\/akalki-0\.jpg\?fit\=1920\%2C820\&ssl\=1\'\)\]{
   background-image: url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1');
 }
 .bg-\[url\(\'https\:\/\/img2\.freepng\.es\/20180717\/cz\/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214\.7783760115318026250566\.jpg\'\)\]{
   background-image: url('https://img2.freepng.es/20180717/cz/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214.7783760115318026250566.jpg');
+}
+.bg-logo{
+  background-image: url("https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg");
 }
 .bg-hero-image{
   background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
@@ -682,14 +679,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-2{
   padding: 0.5rem;
 }
-.p-5{
-  padding: 1.25rem;
+.p-3{
+  padding: 0.75rem;
 }
 .p-8{
   padding: 2rem;
 }
 .p-4{
   padding: 1rem;
+}
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 .px-3{
   padding-left: 0.75rem;
@@ -713,10 +714,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
-}
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 .text-6xl{
   font-size: 3.75rem;
@@ -833,6 +830,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px){
 
 
+  .md\:m-auto{
+    margin: auto;
+  }
+
+
   .md\:flex{
     display: flex;
   }
@@ -840,5 +842,43 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:hidden{
     display: none;
+  }
+
+
+  .md\:w-1\/2{
+    width: 50%;
+  }
+
+
+  .md\:w-full{
+    width: 100%;
+  }
+
+
+  .md\:flex-col{
+    flex-direction: column;
+  }
+}
+@media (min-width: 1024px){
+
+
+  .lg\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+
+  .lg\:w-3\/5{
+    width: 60%;
+  }
+
+
+  .lg\:w-2\/5{
+    width: 40%;
+  }
+
+
+  .lg\:w-1\/3{
+    width: 33.333333%;
   }
 }

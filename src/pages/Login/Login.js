@@ -22,11 +22,11 @@ const Login = () => {
     
     return (
         <div className="flex">
-            <div className="bg-no-repeat bg-cover bg-[url('https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/20/08/2008427_v4.jpeg')] w-3/5 ">
+            <div className="bg-no-repeat bg-cover bg-background-login lg:w-3/5 md:w-1/2 w-0">
             </div>
-            <div className="w-2/5 h-screen grid justify-center content-center">
+            <div className="lg:w-2/5 md:w-1/2 w-full h-screen grid justify-center content-center">
                 <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" />
-                <form className="mx-24 my-5" onSubmit={handleSubmit}>
+                <form className="my-5 px-10 mx-5" onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <span className="block text-sm font-medium text-slate-700">Correo elect&oacute;nico</span>    
                         <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400

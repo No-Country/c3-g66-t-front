@@ -30,19 +30,19 @@ const Register = () => {
 
     return (
         <div className="flex">
-            <div className="bg-no-repeat bg-cover bg-[url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1')] w-full h-screen flex opacity-100">
-                <div className="bg-white grid content-center justify-center w-1/3 m-10 rounded-lg shadow-2xl p-5 ">
-                    <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" className="w-3/5 m-auto"/>
+            <div className="bg-no-repeat bg-cover bg-[url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1')] w-full min-h-screen flex opacity-100">
+                <div className="bg-white grid content-center justify-center lg:w-1/3 md:w-1/2 w-full md:m-auto lg:mx-10 rounded-lg shadow-2xl p-3">
+                    <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" className="w-1/2 m-auto"/>
                     <form className="m-5" onSubmit={handleSubmit}>
-                        <div className="flex gap-3">
-                            <div className="mb-3 w-1/2">
+                        <div className="md:flex gap-3">
+                            <div className="mb-3 w-full md:w-1/2">
                                 <span className="block text-sm font-medium text-slate-700">Nombre(s)</span>    
                                 <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                     focus:outline-none focus:border-sky-500 focus:ring-1"  placeholder="Ingrese su nombre" name="firstname" onChange={handleInput}
                                     value={inputs.firstname} 
                                 />
                             </div>
-                            <div className="mb-3 w-1/2">
+                            <div className="mb-3 w-full md:w-1/2">
                                 <span className="block text-sm font-medium text-slate-700">Apellidos</span>    
                                 <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                     focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su apellido" name="lastname"
@@ -50,21 +50,23 @@ const Register = () => {
                                 />
                             </div>
                         </div>
-                        <div className="flex">
-                            <div className="w-1/2">
-                                <div className="mb-3 w-full">
-                                    <span className="block text-sm font-medium text-slate-700">DNI</span>    
-                                    <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                                        focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su identificaci&oacute;n"
-                                        onChange={handleInput} name="dni" value={inputs.dni}
-                                    />
-                                </div>
-                                <div className="mb-3 w-full">
-                                    <span className="block text-sm font-medium text-slate-700">Telefono</span>    
-                                    <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
-                                        focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su n&uacute;mero de celular"
-                                        onChange={handleInput} name="phone" value={inputs.phone}
-                                    />
+                        <div className="md:flex">
+                            <div className="w-full md:w-1/2">
+                                <div className='flex gap-3 md:flex-col'>
+                                    <div className="mb-3 w-1/2 md:w-full">
+                                        <span className="block text-sm font-medium text-slate-700">DNI</span>    
+                                        <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                            focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su identificaci&oacute;n"
+                                            onChange={handleInput} name="dni" value={inputs.dni}
+                                        />
+                                    </div>
+                                    <div className="mb-3 w-1/2 md:w-full">
+                                        <span className="block text-sm font-medium text-slate-700">Telefono</span>    
+                                        <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                            focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su n&uacute;mero de celular"
+                                            onChange={handleInput} name="phone" value={inputs.phone}
+                                        />
+                                    </div>
                                 </div>
                                 <div className="mb-3 w-full ">
                                     <span className="block text-sm font-medium text-slate-700">Foto</span>    
@@ -82,15 +84,15 @@ const Register = () => {
                                 </button>
                             </div>
                         </div>                        
-                        <div className="flex gap-3 mt-2">
-                            <div className="mb-3 w-1/2">
+                        <div className="md:flex gap-3 mt-2">
+                            <div className="mb-3 w-full md:w-1/2">
                                 <span className="block text-sm font-medium text-slate-700">Email</span>    
                                 <input type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                     focus:outline-none focus:border-sky-500 focus:ring-1" placeholder="Ingrese su correo electr&oacute;nico"
                                     onChange={handleInput} name="email" value={inputs.email}
                                 />
                             </div>
-                            <div className="mb-3 w-1/2">
+                            <div className="mb-3 w-full md:w-1/2">
                                 <span className="block text-sm font-medium text-slate-700">Contraseña</span>    
                                 <input type="password" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                     focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su contraseña" 
