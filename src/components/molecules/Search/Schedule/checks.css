@@ -1,0 +1,42 @@
+.container-schedule-out{
+    @apply
+    col-span-2
+    flex flex-row justify-around items-center
+    border border-details border-opacity-60
+    rounded-xl
+    h-4/6 w-full
+    md:col-span-1 md:rounded-tl-none md:rounded-bl-none
+    lg:border-r-0 lg:border-t lg:rounded-none lg:mt-4;
+}
+.container-schedule-in{
+    @apply
+    col-span-2
+    flex flex-row justify-around items-center
+    border border-details border-opacity-60
+    rounded-xl
+    h-4/6 w-full
+    md:col-span-1 md:border-r-0 md:rounded-tr-none md:rounded-br-none
+    lg:border-r lg:border-t lg:rounded-none lg:mt-4;
+}
+.container-inputs-schedule{
+    @apply
+    flex justify-center items-center w-11/12 h-full;
+}
+.title-schedule{
+    @apply
+    text-details font-medium text-xs text-opacity-60
+    flex flex-col w-full mt-1
+    lg:text-sm;
+}
+.inputs-value{
+    @apply
+    bg-transparent border-b mb-2
+    text-white text-xs
+    focus:outline-none
+    md:mb-1 md:text-xs
+    lg:mb-1
+    xl:text-sm xl:mb-2; 
+}
+input[type=date]::-webkit-calendar-picker-indicator{
+    filter: drop-shadow(16px 16px 20px rgb(255, 255, 255)) invert(100%);
+}
