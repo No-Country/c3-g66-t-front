@@ -10,12 +10,12 @@
 }
 .container-input-destiny{
     @apply
-    flex justify-center items-center w-10/12 h-full;
+    flex flex-col justify-center items-center w-10/12 h-full;
 }
 .title-destiny{
     @apply 
     text-details font-medium text-xs text-opacity-60
-    flex flex-col w-full mt-1 p-2
+    flex flex-col w-full mt-1 p-2 px-3
     lg:text-sm;
 }
 .destiny-value{
@@ -27,4 +27,19 @@
 }
 .iconWorld{
     @apply text-details text-3xl opacity-60;
+}
+
+.suggestionWrapper{
+    @apply bg-white p-2 mt-72 absolute 
+    w-2/3 h-36 mb-28
+    sm:w-9/12 sm:h-40 sm:mb-24 sm:rounded-md
+    md:w-3/4 md:h-44 md:mb-20 
+    lg:w-64 lg:h-48 lg:mb-16
+    xl:w-80 xl:h-56 xl:mb-6 xl:rounded-none
+    2xl:w-96;
+}
+.suggestions{
+    @apply cursor-pointer hover:bg-details text-sm
+    md:text-sm
+    xl:text-base
 }
