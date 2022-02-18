@@ -1,5 +1,8 @@
-import './search.css';
-import ButtonSearch from '../../atoms/Buttons/Search/ButtonSearch'
+
+//Hola, te lo comenté porque me estaba tirando error.
+
+/*import './search.css';
+import ButtonSearch from '../../atoms/Buttons/Search/ButtonSearch';
 import InputDestiny from '../../molecules/Search/Destiny/InputDestiny';
 import InputGuests from '../../molecules/Search/Guests/InputGuests';
 import CheckInInput from '../../molecules/Search/Schedule/CheckIn';
@@ -19,4 +22,5 @@ const Search = () => {
     )
 }
 
-export default Search
+export default Search;
+*/
