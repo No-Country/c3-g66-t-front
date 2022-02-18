@@ -1,5 +1,3 @@
-
-
 import './search.css';
 import ButtonSearch from '../../atoms/Buttons/Search/ButtonSearch';
 import InputDestiny from '../../molecules/Search/Destiny/InputDestiny';
