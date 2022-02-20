@@ -1,6 +1,6 @@
 import Navbar from "../../components/organisms/Navbar/Navbar";
 import Section from "../../components/organisms/Section/Section";
-import './home.css';
+import Footer from '../../components/organisms/Footer/Footer'
 
 const Home = () => {
     return (
@@ -9,6 +9,7 @@ const Home = () => {
               <Navbar />
               <Section /> 
             </div>
+            <Footer/>
         </div>
     );
 };

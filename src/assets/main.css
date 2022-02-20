@@ -524,6 +524,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.25rem;
   margin-right: 1.25rem;
 }
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
 .mb-3{
   margin-bottom: 0.75rem;
 }
@@ -541,6 +549,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-2{
   margin-top: 0.5rem;
+}
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 .block{
   display: block;
@@ -584,6 +595,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-8{
   width: 2rem;
 }
+.w-10\/12{
+  width: 83.333333%;
+}
+.w-6{
+  width: 1.5rem;
+}
 .scale-150{
   --tw-scale-x: 1.5;
   --tw-scale-y: 1.5;
@@ -593,8 +610,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-scale-x: -1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.flex-row{
+  flex-direction: row;
+}
 .flex-col{
   flex-direction: column;
+}
+.flex-wrap{
+  flex-wrap: wrap;
 }
 .content-center{
   align-content: center;
@@ -617,6 +640,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-6{
   gap: 1.5rem;
 }
+.gap-x-20{
+  column-gap: 5rem;
+}
+.gap-y-5{
+  row-gap: 1.25rem;
+}
+.gap-y-3{
+  row-gap: 0.75rem;
+}
 .self-center{
   align-self: center;
 }
@@ -632,9 +664,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border{
   border-width: 1px;
 }
+.border-t{
+  border-top-width: 1px;
+}
 .border-slate-300{
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
+}
+.border-gray-500{
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -651,6 +690,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-sky-700{
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
+}
+.bg-stone-900{
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 25 23 / var(--tw-bg-opacity));
 }
 .bg-black\/20{
   background-color: rgb(0 0 0 / 0.2);
@@ -682,6 +725,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-3{
   padding: 0.75rem;
 }
+.p-5{
+  padding: 1.25rem;
+}
 .p-8{
   padding: 2rem;
 }
@@ -704,12 +750,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-left: 1rem;
   padding-right: 1rem;
 }
+.pt-10{
+  padding-top: 2.5rem;
+}
+.pt-2{
+  padding-top: 0.5rem;
+}
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+.pt-5{
+  padding-top: 1.25rem;
+}
 .text-center{
   text-align: center;
 }
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .text-2xl{
   font-size: 1.5rem;
@@ -748,6 +810,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
 }
+.text-gray-400{
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
+}
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -784,6 +854,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+.duration-700{
+  transition-duration: 700ms;
+}
 .hover\:-translate-y-0\.5:hover{
   --tw-translate-y: -0.125rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -801,6 +874,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .hover\:animate-spin:hover{
   animation: spin 1s linear infinite;
+}
+.hover\:text-gray-100:hover{
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 .hover\:underline:hover{
   text-decoration-line: underline;
@@ -859,6 +936,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
 
+  .md\:flex-auto{
+    flex: 1 1 auto;
+  }
+
+
+  .md\:flex-row{
+    flex-direction: row;
+  }
+
+
   .md\:flex-col{
     flex-direction: column;
   }
@@ -884,5 +971,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:w-1\/3{
     width: 33.333333%;
+  }
+
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 }
