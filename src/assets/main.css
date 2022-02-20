@@ -636,9 +636,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
-.border-indigo-600{
+.border-amber-400{
   --tw-border-opacity: 1;
-  border-color: rgb(79 70 229 / var(--tw-border-opacity));
+  border-color: rgb(251 191 36 / var(--tw-border-opacity));
 }
 .bg-white{
   --tw-bg-opacity: 1;
@@ -805,6 +805,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .hover\:animate-spin:hover{
   animation: spin 1s linear infinite;
+}
+.hover\:border-b-2:hover{
+  border-bottom-width: 2px;
+}
+.hover\:text-amber-300:hover{
+  --tw-text-opacity: 1;
+  color: rgb(252 211 77 / var(--tw-text-opacity));
+}
+.hover\:text-amber-400:hover{
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity));
 }
 .hover\:underline:hover{
   text-decoration-line: underline;
