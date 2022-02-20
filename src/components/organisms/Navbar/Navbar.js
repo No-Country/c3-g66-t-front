@@ -13,9 +13,9 @@ const Navbar = () => {
     }
     return(
         <>
-        <div className="fixed z-10 w-full text-white flex justify-between px-4 items-center">
+        <div className="fixed z-10 w-full text-white flex justify-between px-4  items-center bg-black/20">
             <div className="text-2xl font-bolod text-center">
-                <Link to="/">Aca va logo <span className="block text-4xl">Hotely</span></Link>
+                <Link to="/"><span className="block text-4xl">Hotely</span></Link>
             </div>
 
             <nav>
