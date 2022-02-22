@@ -8,7 +8,7 @@ import Navbar from '../components/organisms/Navbar/Navbar';
 const Router = () => {
     return (
         <BrowserRouter>
-          <Navbar />
+          
             <Routes>
                 <Route path='/' element={<Home/>}/>
                 <Route path='/login' element={<Login/>} />
