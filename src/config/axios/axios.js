@@ -4,7 +4,7 @@ import axios from "axios";
 //token de usuario mapbox creado por ailén:
 const mapBoxToken = 'pk.eyJ1Ijoibm9jb3VudHJ5LTY2IiwiYSI6ImNrenJjZ3RqZjZyc20ydm5mZG4wd3U3bmEifQ.S1LiIZ3AboqkYOVYiSeJNg';
 
-const searchApi = axios.create({
+const searchApiMapBox = axios.create({
     baseURL: 'https://api.mapbox.com/geocoding/v5/mapbox.places',
     params: {
         limit: 5,
@@ -16,4 +16,8 @@ const searchApi = axios.create({
     }
 });
 
-export { searchApi };
+const searchLocation = axios.create({
+    baseURL: 'https://nc-hotely.herokuapp.com/api/v1'
+});
+
+export { searchApiMapBox, searchLocation };
