@@ -1,22 +1,16 @@
-import { useState } from 'react';
 import './checks.css';
 
-const CheckInInput = () => {
-    
-    //falta agregar funcionalidad para guardar las fechas que ingresa el usuario
-
-    const [startDate, setStartDate] = useState(new Date());
+const CheckInInput = ( {checkin_date, checkinChange} ) => {
 
     const handleChange = (e) => {
-        setStartDate(e.target.value);
-        console.log(startDate);
+        checkinChange(e.target.value);
     }
 
     return (
         <div className='container-schedule-in'>
             <div className='container-inputs-schedule'>
                 <label form='inputs-value' className='title-schedule'>Check-In
-                    <input onChange={handleChange} type='date' className='inputs-value' value={startDate} />
+                    <input onChange={handleChange} type='date' className='inputs-value' value={checkin_date} />
                 </label> 
             </div>
         </div>

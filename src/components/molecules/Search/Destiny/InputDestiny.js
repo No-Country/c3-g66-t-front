@@ -1,51 +1,70 @@
 import '../Destiny/destiny.css'
 import { BiWorld } from 'react-icons/bi';
-import { useState } from "react";
-import { searchApi } from '../../../../config/axios/axios';
+import { useState, useRef, useEffect } from "react";
+import { searchApiMapBox } from '../../../../config/axios/axios';
 
-//falta:
-//limpiar sugerencias cuando se borra o no se selecciona nada, ver el focus
+const InputDestiny = ( {location, locationChange }) => {
 
-const InputDestiny = () => {
-
-    const [value, setValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
+    const [isFocusInput, setIsFocusInput] = useState(false);
+    const [showSuggestions, setShowSuggestions] = useState(false);
+    const focusInput = useRef();
 
     const handleChange = async (event) => {
-        setValue(event.target.value);
-
+        locationChange(event.target.value);
         try {
-            if (value !== '') {
-                const results = await searchApi.get(`/${value}.json`);
+            if (location !== '') {
+                const results = await searchApiMapBox.get(`/${location}.json`);
                 setSuggestions(results?.data?.features);
-                console.log(suggestions); 
             }
         } catch (error) {
             console.log("Error fetching data, ", error);
         }
     };
 
+    const handleBlur = () => {
+        setIsFocusInput(false);
+        focusInput.current.blur();
+    }
+    const handleFocus = () => {
+        setIsFocusInput(true);
+        focusInput.current.focus();
+    }
+
+    useEffect( () => {
+        if (location === '') {
+            setShowSuggestions(false)
+        }else if (isFocusInput){
+            setShowSuggestions(true);
+        }
+    }, [location, isFocusInput] )
+
     return (
         <div className='container-destiny'>
             <BiWorld className='iconWorld' />
-            <div className='container-input-destiny'>
+            <div className='container-input-destiny' onFocus={handleFocus} >
                 <label form='destiny-value' className='title-destiny'>Destino
-                    <input className='destiny-value' value={value} onChange={handleChange} />
+                    <input
+                        className='destiny-value'
+                        value={location}
+                        onChange={handleChange}
+                        ref={focusInput}
+                        onBlur={handleBlur}
+                    />
                 </label>    
-                {suggestions?.length > 0 && 
+                {suggestions?.length > 0 && showSuggestions && 
                     <div className='suggestionWrapper'>
                         {suggestions.map((suggestion, index) => {
                             return (
                             <p
                                 key={index}
                                 onClick={() => {
-                                setValue(suggestion.place_name);
+                                locationChange(suggestion.place_name);
                                 setSuggestions([]);
                                 }}
                                 className='suggestions'
                             >
                                 {suggestion.place_name}
-                            
                             </p>
                             );
                         })}
