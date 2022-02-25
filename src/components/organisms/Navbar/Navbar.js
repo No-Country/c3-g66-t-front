@@ -24,7 +24,7 @@ const Navbar = () => {
                 </div>
                 <ul className="hidden md:flex gap-6 p-4 uppercase">
                     <li><Link to="/" className="hover:text-amber-400 hover:border-b-2 border-amber-400">Home</Link></li>
-                    <li><Link to="/" className="hover:text-amber-400 hover:border-b-2 border-amber-400">Alojamiento</Link></li>
+                    <li><Link to="/hotels" className="hover:text-amber-400 hover:border-b-2 border-amber-400">Alojamiento</Link></li>
                     <li><Link to="/" className="hover:text-amber-400 hover:border-b-2 border-amber-400">Contacto</Link></li>
                     <li><Link to="/login" className="hover:text-amber-400 hover:border-b-2 border-amber-400">Entrar</Link></li>
                     <li><Link to="/register" className="hover:text-amber-400 hover:border-b-2 border-amber-400">Registrarse</Link></li>
