@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HotelList from "./HotelList";
 
+
 const HotelListContainer = () => {
    
     const [hotels, setHotels] = useState([]);
@@ -16,7 +17,8 @@ const HotelListContainer = () => {
    return(
        <>
          <div className="bg-hero-image w-full h-screen bg-cover bg-center flex flex-wrap items-center justify-center px-4 gap-8 "> 
-             <HotelList hotels={hotels} />
+            
+            <HotelList hotels={hotels} />
          </div>
        </>
    );
