@@ -1,4 +1,3 @@
-import Navbar from "../../components/organisms/Navbar/Navbar";
 import Section from "../../components/organisms/Section/Section";
 import Footer from '../../components/organisms/Footer/Footer';
 import FilterSection from "../../components/organisms/Filter/FilterSection";
@@ -9,7 +8,6 @@ const Hotels = () => {
     return (
         <div>
             <div>
-              <Navbar />
               <Section />
             </div>
             <div className='mainSection'>
