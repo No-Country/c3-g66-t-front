@@ -1,0 +1,5 @@
+.mainSection{
+    height: 800px;
+    display: flex;
+    flex-direction: row;
+}

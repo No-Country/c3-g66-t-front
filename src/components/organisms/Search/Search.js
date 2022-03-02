@@ -12,7 +12,7 @@ const Search = () => {
     const [location, setLocation] = useState('');
     const [checkin_date, setCheckin_date] = useState(date);
     const [checkout_date, setCheckout_date] = useState(date);
-    const [amountGuests, setAmountGuests] = useState(2);
+    const [adults_number, setAdults_number] = useState(2);
 
     const handleChangeLocation = (newLocation) => {
         setLocation(newLocation);
@@ -23,8 +23,8 @@ const Search = () => {
     const handleChangeCheckoutDate = (newDate) => {
         setCheckout_date(newDate);
     };
-    const handleChangeAmountGuests = (newGuests) => {
-        setAmountGuests(newGuests);
+    const handleChangeAdults_number = (newGuests) => {
+        setAdults_number(newGuests);
     };
 
     return (
@@ -33,13 +33,16 @@ const Search = () => {
             <InputDestiny location={location} locationChange={handleChangeLocation} />
             <CheckInInput checkin_date={checkin_date} checkinChange={handleChangeCheckinDate} />
             <CheckOutInput checkout_date={checkout_date} checkoutChange={handleChangeCheckoutDate} />
-            <InputGuests amountGuests={amountGuests} amountGuestsChange={handleChangeAmountGuests} />
+            <InputGuests amountGuests={adults_number} adults_numberChange={handleChangeAdults_number} />
             <ButtonSearch
             location={location} date={date}
             locationChange={handleChangeLocation}
             checkinChange={handleChangeCheckinDate}
             checkoutChange={handleChangeCheckoutDate}
-            amountGuestsChange={handleChangeAmountGuests}
+            adults_numberChange={handleChangeAdults_number}
+            checkin_date={checkin_date}
+            checkout_date={checkout_date}
+            adults_number={adults_number}
             /> 
         </div> 
     )
