@@ -1,19 +1,19 @@
 import '../Guests/guests.css'
 import { AiOutlineUser } from 'react-icons/ai'
 
-const InputGuests = ( {amountGuests, amountGuestsChange} ) => {
-    const limit = 10;
+const InputGuests = ( {amountGuests, adults_numberChange} ) => {
+    const limit = 7;
 
     //funcion para restar personas:
     const onSub = () => {
         if (amountGuests > 1){
-            amountGuestsChange(amountGuests-1);
+            adults_numberChange(amountGuests-1);
         }
     };
     //función para sumar personas:
     const onAdd = () => {
         if (amountGuests < limit) { 
-            amountGuestsChange(amountGuests+1);
+            adults_numberChange(amountGuests+1);
         }
     };
 

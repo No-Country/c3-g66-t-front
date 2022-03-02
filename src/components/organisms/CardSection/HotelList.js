@@ -4,8 +4,9 @@ const HotelList = ( {hotels} ) =>{
     return(
         <>
            {
-               hotels.map(hotel =>(
+               hotels.map( (hotel, i) =>(
                    <HotelCard
+                      key={i}
                       title={hotel.place_name}
                    />
                ))
