@@ -1,6 +1,7 @@
 import '../Search/search.css';
 import { useEffect } from 'react';
-import { useDispatch, useSelector, useNavigate } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from 'react-router';
 import { GetLocationAction } from '../../../../store/slices/search/LocationReducer';
 import { GetListHotelsAction } from '../../../../store/slices/search/ListHotelsReducer';
 
