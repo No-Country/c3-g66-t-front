@@ -486,6 +486,44 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container{
+  width: 100%;
+}
+@media (min-width: 640px){
+
+
+  .container{
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px){
+
+
+  .container{
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px){
+
+
+  .container{
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px){
+
+
+  .container{
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px){
+
+
+  .container{
+    max-width: 1536px;
+  }
+}
 .visible{
   visibility: visible;
 }
@@ -495,14 +533,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .absolute{
   position: absolute;
 }
-.relative{
-  position: relative;
-}
 .inset-0{
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
+}
+.right-0{
+  right: 0px;
+}
+.top-12{
+  top: 3rem;
 }
 .left-1\/4{
   left: 25%;
@@ -513,15 +554,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .top-3{
   top: 0.75rem;
 }
-.bottom-0{
-  bottom: 0px;
-}
-.right-0{
-  right: 0px;
-}
-.top-12{
-  top: 3rem;
-}
 .z-10{
   z-index: 10;
 }
@@ -531,31 +563,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .m-5{
   margin: 1.25rem;
 }
-.my-5{
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-.mx-5{
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
 .mb-3{
   margin-bottom: 0.75rem;
 }
-.mt-1{
-  margin-top: 0.25rem;
-}
 .mb-5{
   margin-bottom: 1.25rem;
+}
+.mt-2{
+  margin-top: 0.5rem;
+}
+.mt-1{
+  margin-top: 0.25rem;
 }
 .ml-5{
   margin-left: 1.25rem;
 }
 .-mt-8{
   margin-top: -2rem;
-}
-.mt-2{
-  margin-top: 0.5rem;
 }
 .block{
   display: block;
@@ -581,32 +605,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .min-h-screen{
   min-height: 100vh;
 }
-.w-0{
-  width: 0px;
+.w-1\/2{
+  width: 50%;
 }
 .w-full{
   width: 100%;
-}
-.w-36{
-  width: 9rem;
-}
-.w-1\/2{
-  width: 50%;
 }
 .w-44{
   width: 11rem;
 }
 .w-8{
   width: 2rem;
-}
-.w-1\/3{
-  width: 33.333333%;
-}
-.w-2\/3{
-  width: 66.666667%;
-}
-.w-1\/5{
-  width: 20%;
 }
 .scale-150{
   --tw-scale-x: 1.5;
@@ -644,11 +653,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .self-center{
   align-self: center;
 }
-.rounded-md{
-  border-radius: 0.375rem;
-}
 .rounded-lg{
   border-radius: 0.5rem;
+}
+.rounded-md{
+  border-radius: 0.375rem;
 }
 .rounded-full{
   border-radius: 9999px;
@@ -660,13 +669,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
+.bg-red-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+.bg-black\/20{
+  background-color: rgb(0 0 0 / 0.2);
+}
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-.bg-sky-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(2 132 199 / var(--tw-bg-opacity));
 }
 .bg-slate-400{
   --tw-bg-opacity: 1;
@@ -676,24 +688,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
-.bg-black\/20{
-  background-color: rgb(0 0 0 / 0.2);
-}
-.bg-red-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-.bg-background-login{
-  background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/20/08/2008427_v4.jpeg");
+.bg-hero-image{
+  background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
 }
 .bg-\[url\(\'https\:\/\/i0\.wp\.com\/foodandpleasure\.com\/wp-content\/uploads\/2018\/04\/akalki-0\.jpg\?fit\=1920\%2C820\&ssl\=1\'\)\]{
   background-image: url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1');
 }
 .bg-\[url\(\'https\:\/\/img2\.freepng\.es\/20180717\/cz\/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214\.7783760115318026250566\.jpg\'\)\]{
   background-image: url('https://img2.freepng.es/20180717/cz/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214.7783760115318026250566.jpg');
-}
-.bg-hero-image{
-  background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
 }
 .bg-cover{
   background-size: cover;
@@ -704,12 +706,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
-.p-2{
-  padding: 0.5rem;
-}
-.p-3{
-  padding: 0.75rem;
-}
 .p-5{
   padding: 1.25rem;
 }
@@ -719,9 +715,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-4{
   padding: 1rem;
 }
-.px-10{
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.p-3{
+  padding: 0.75rem;
+}
+.p-2{
+  padding: 0.5rem;
+}
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .px-3{
   padding-left: 0.75rem;
@@ -731,16 +733,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
 .text-center{
   text-align: center;
-}
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
 }
 .text-2xl{
   font-size: 1.5rem;
@@ -754,14 +748,30 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 3.75rem;
   line-height: 1;
 }
-.font-medium{
-  font-weight: 500;
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 .font-extrabold{
   font-weight: 800;
 }
+.font-medium{
+  font-weight: 500;
+}
 .uppercase{
   text-transform: uppercase;
+}
+.text-blue-600{
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-slate-700{
   --tw-text-opacity: 1;
@@ -770,18 +780,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-200{
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-.text-blue-600{
-  --tw-text-opacity: 1;
-  color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .underline-offset-8{
   text-underline-offset: 8px;
@@ -793,18 +791,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .opacity-100{
   opacity: 1;
 }
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .shadow-2xl{
   --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+.shadow-sm{
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .backdrop-blur-lg{
   --tw-backdrop-blur: blur(16px);
@@ -868,21 +863,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 768px){
 
 
-  .md\:top-12{
-    top: 3rem;
-  }
-
-
-  .md\:bottom-0{
-    bottom: 0px;
-  }
-
-
-  .md\:right-0{
-    right: 0px;
-  }
-
-
   .md\:m-auto{
     margin: auto;
   }
@@ -916,29 +896,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   .md\:flex-col{
     flex-direction: column;
   }
-
-
-  .md\:bg-red-300{
-    --tw-bg-opacity: 1;
-    background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-  }
 }
 @media (min-width: 1024px){
-
-
-  .lg\:absolute{
-    position: absolute;
-  }
-
-
-  .lg\:right-0{
-    right: 0px;
-  }
-
-
-  .lg\:top-12{
-    top: 3rem;
-  }
 
 
   .lg\:mx-10{
@@ -947,28 +906,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 
 
-  .lg\:w-3\/5{
-    width: 60%;
-  }
-
-
-  .lg\:w-2\/5{
-    width: 40%;
-  }
-
-
   .lg\:w-1\/3{
     width: 33.333333%;
-  }
-
-
-  .lg\:w-1\/5{
-    width: 20%;
-  }
-
-
-  .lg\:bg-red-300{
-    --tw-bg-opacity: 1;
-    background-color: rgb(252 165 165 / var(--tw-bg-opacity));
   }
 }

@@ -1,0 +1,28 @@
+.error-message {
+  @apply text-xs text-red-500 mt-1;
+}
+.container-image {
+  @apply bg-no-repeat bg-cover bg-background-login lg:w-3/5 md:w-1/2 w-0;
+}
+.container {
+  @apply lg:w-2/5 md:w-1/2 w-full h-screen grid justify-center content-center;
+}
+.form-container {
+  @apply my-5 px-10 mx-5;
+}
+.field-label {
+  @apply block text-sm font-medium text-slate-700;
+}
+.input-field {
+  @apply mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                            focus:outline-none focus:border-sky-500 focus:ring-1;
+}
+.button-container {
+  @apply grid justify-center mb-5;
+}
+.button {
+  @apply p-2 w-36 rounded-md text-gray-200 bg-sky-600 hover:-translate-y-0.5 transition motion-reduce:hover:translate-y-0 motion-reduce:transition-none;
+}
+.span-message {
+  @apply text-center text-gray-500;
+}

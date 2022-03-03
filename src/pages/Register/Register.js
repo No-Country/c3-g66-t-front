@@ -3,12 +3,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import React, { useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { register, resetUserSignUp } from "../../store/slices/user"
-import ModalPortal from "../../components/organisms/Error"
-
-
-
+import ToastPortal from "../../components/atoms/Toast"
 import { Formik, Form, Field, ErrorMessage } from 'formik';
- 
+
+import "./Register.css" 
+
 const Register = () => {
     let navigate = useNavigate();
     const dispatch = useDispatch()    
@@ -68,7 +67,7 @@ const Register = () => {
                 <div className="bg-no-repeat bg-cover bg-[url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1')] w-full min-h-screen flex opacity-100">
                     <div className="bg-white grid content-center justify-center lg:w-1/3 md:w-1/2 w-full md:m-auto lg:mx-10 rounded-lg shadow-2xl p-3">
                         <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" className="w-1/2 m-auto" />
-                        {errors && <ModalPortal errors={errors}/>}
+                        {errors && <ToastPortal errors={errors}/>}
                         <Form className="m-5">
                             <div className="md:flex gap-3">
                                 <div className="mb-3 w-full md:w-1/2">
@@ -76,14 +75,14 @@ const Register = () => {
                                     <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                         focus:outline-none focus:border-sky-500 focus:ring-1"  placeholder="Ingrese su nombre" name="firstname"                                         
                                     />
-                                    <ErrorMessage name="firstname" component="div" />
+                                    <ErrorMessage className="errorMessage" name="firstname" component="div" />
                                 </div>
                                 <div className="mb-3 w-full md:w-1/2">
                                     <span className="block text-sm font-medium text-slate-700">Apellidos</span>
                                     <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                         focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su apellido" name="lastname"                                         
                                     />
-                                    <ErrorMessage name="lastname" component="div" />
+                                    <ErrorMessage className="errorMessage" name="lastname" component="div" />
                                 </div>
                                 {/* {errors.length > 0 && <ModalPortal errors={errors} />} */}
                             </div>
@@ -96,7 +95,7 @@ const Register = () => {
                                                 focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su identificaci&oacute;n"
                                                  name="dni" 
                                             />
-                                            <ErrorMessage name="dni" component="div" />
+                                            <ErrorMessage className="errorMessage" name="dni" component="div" />
                                         </div>
                                         <div className="mb-3 w-1/2 md:w-full">
                                             <span className="block text-sm font-medium text-slate-700">Telefono</span>
@@ -104,7 +103,7 @@ const Register = () => {
                                                 focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su n&uacute;mero de celular"
                                                  name="phone" 
                                             />
-                                            <ErrorMessage name="phone" component="div" />
+                                            <ErrorMessage className="errorMessage" name="phone" component="div" />
                                         </div>
                                     </div>
                                     <div className="mb-3 w-full ">
@@ -112,7 +111,7 @@ const Register = () => {
                                         <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                             focus:outline-none focus:border-sky-500 focus:ring-1" name="img"                                             
                                         />
-                                        <ErrorMessage name="img" component="div" />
+                                        <ErrorMessage className="errorMessage" name="img" component="div" />
                                     </div>
                                 </div>
                                 {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGcBqHI_nx1QkcHOgUPs5JaIhH0Epi476MTBWRVmimQhILgWpie070xtty5wovR6X9QXU&usqp=CAU */}
@@ -130,7 +129,7 @@ const Register = () => {
                                         focus:outline-none focus:border-sky-500 focus:ring-1" placeholder="Ingrese su correo electr&oacute;nico"
                                          name="email" 
                                     />
-                                    <ErrorMessage name="email" component="div" />
+                                    <ErrorMessage className="errorMessage" name="email" component="div" />
                                 </div>
                                 <div className="mb-3 w-full md:w-1/2">
                                     <span className="block text-sm font-medium text-slate-700">Contraseña</span>
@@ -138,7 +137,7 @@ const Register = () => {
                                         focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su contraseña"
                                          name="password" 
                                     />
-                                    <ErrorMessage name="password" component="div" />
+                                    <ErrorMessage className="errorMessage" name="password" component="div" />
                                 </div>
                             </div>
                             <div className="grid mt-2">
