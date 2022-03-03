@@ -581,6 +581,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-8{
   height: 2rem;
 }
+.h-80{
+  height: 20rem;
+}
 .h-auto{
   height: auto;
 }
@@ -754,9 +757,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
-.bg-black\/20{
-  background-color: rgb(0 0 0 / 0.2);
-}
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -768,6 +768,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-stone-900{
   --tw-bg-opacity: 1;
   background-color: rgb(28 25 23 / var(--tw-bg-opacity));
+}
+.bg-black\/20{
+  background-color: rgb(0 0 0 / 0.2);
 }
 .bg-background-login{
   background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/20/08/2008427_v4.jpeg");

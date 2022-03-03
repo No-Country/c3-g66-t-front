@@ -9,10 +9,11 @@ const Hotels = () => {
         <div>
             <div>
               <Section />
+              <HotelListContainer/>
             </div>
             <div className='mainSection'>
                 <FilterSection /> 
-                <HotelListContainer/>
+                
             </div>
             <Footer/>
         </div>
