@@ -1,7 +1,7 @@
 import {AiTwotoneEnvironment} from "react-icons/ai"
 import { VscTriangleRight } from "react-icons/vsc";
 
-function HotelCard( {title, city, country, mainImg, id} ) {
+function HotelCard( {title, city, country, mainImg, key} ) {
     return (
    <div className="p-5">
         <div className="w-60 p-15 rounded-lg mx-auto flex flex-col items-center transform hover:scale-125 transition-all">
