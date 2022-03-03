@@ -1,9 +1,5 @@
 import axios from "axios"
 
-let token = window.localStorage.getItem('token') || null;
-
- 
-
 const registerService = async (data) => {
     const apiURL = 'https://nc-hotely.herokuapp.com/api/v1/auth/register'
     const response = await axios.post(apiURL, data)    

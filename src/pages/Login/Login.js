@@ -49,7 +49,7 @@ const Login = () => {
                     {
                         message && <ToastPortal errors={[message]} />
                     }
-                    <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" />
+                    <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" alt="logo"/>
                     <Form className="form-container">
                         <div className="mb-3">
                             <span className="field-label">Correo elect&oacute;nico</span>                        

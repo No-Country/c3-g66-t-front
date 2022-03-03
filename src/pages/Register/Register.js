@@ -66,7 +66,7 @@ const Register = () => {
             >
                 <div className="bg-no-repeat bg-cover bg-[url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1')] w-full min-h-screen flex opacity-100">
                     <div className="bg-white grid content-center justify-center lg:w-1/3 md:w-1/2 w-full md:m-auto lg:mx-10 rounded-lg shadow-2xl p-3">
-                        <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" className="w-1/2 m-auto" />
+                        <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" className="w-1/2 m-auto"  alt="logo"/>
                         {errors && <ToastPortal errors={errors}/>}
                         <Form className="m-5">
                             <div className="md:flex gap-3">

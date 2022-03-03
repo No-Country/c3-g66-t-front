@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom"
-import Navbar from "../../components/organisms/Navbar/Navbar";
 import Section from "../../components/organisms/Section/Section";
-import './home.css';
+import Footer from '../../components/organisms/Footer/Footer';
 
 const Home = () => {
     const navigate= useNavigate()
@@ -19,9 +18,9 @@ const Home = () => {
     return (
         <div>
             <div>
-              <Navbar />
-              <Section /> 
+              <Section />
             </div>
+            <Footer/>
         </div>
     );
 };
