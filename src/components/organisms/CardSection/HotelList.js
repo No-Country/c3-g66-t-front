@@ -17,12 +17,10 @@ const HotelList = ( {hotels} ) =>{
         
           <Swiper
                 breakpoints={{
-                  // when window width is >= 640px
                   640: {
                     width: 640,
                     slidesPerView: 1,
                   },
-                  // when window width is >= 768px
                   768: {
                     width: 768,
                     slidesPerView: 2,
@@ -41,8 +39,7 @@ const HotelList = ( {hotels} ) =>{
             ?hotels.map( (hotel, i) =>(
                     <SwiperSlide>  
                     <HotelCard
-                        key={i}
-                        hotelId={hotel.id}
+                        key={hotel.id}
                         mainImg={hotel.thumbnailUrl.srpDesktop}
                         title={hotel.name}
                         city={hotel.address.locality}
