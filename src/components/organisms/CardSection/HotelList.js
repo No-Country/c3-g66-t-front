@@ -14,8 +14,20 @@ import { FreeMode, Pagination } from "swiper";
 const HotelList = ( {hotels} ) =>{
     return(
         <>
+        
           <Swiper
-                slidesPerView={3}
+                breakpoints={{
+                  // when window width is >= 640px
+                  640: {
+                    width: 640,
+                    slidesPerView: 1,
+                  },
+                  // when window width is >= 768px
+                  768: {
+                    width: 768,
+                    slidesPerView: 2,
+                  },
+                }}
                 spaceBetween={30}
                 freeMode={true}
                 pagination={{
@@ -24,22 +36,22 @@ const HotelList = ( {hotels} ) =>{
                 modules={[FreeMode, Pagination]}
                 className="mySwiper"
           >
-          
-           {
-               hotels.map( (hotel, i) =>(
-                <SwiperSlide>  
-                   <HotelCard
-                      key={i}
-                      hotelId={hotel.id}
-                      mainImg={hotel.thumbnailUrl.srpDesktop}
-                      title={hotel.name}
-                      city={hotel.address.locality}
-                      country={hotel.address.countryName}
-                   />
-                </SwiperSlide>
-               ))
-           }
-           
+        {
+        hotels.length > 0
+            ?hotels.map( (hotel, i) =>(
+                    <SwiperSlide>  
+                    <HotelCard
+                        key={i}
+                        hotelId={hotel.id}
+                        mainImg={hotel.thumbnailUrl.srpDesktop}
+                        title={hotel.name}
+                        city={hotel.address.locality}
+                        country={hotel.address.countryName}
+                    />
+                    </SwiperSlide>
+                ))
+                :<h3 className="text-9xl text-indigo-900">No carga</h3>  
+        }   
         </Swiper>
         </>
     );
