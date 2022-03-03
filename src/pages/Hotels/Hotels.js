@@ -11,7 +11,7 @@ const Hotels = () => {
               <Section />
               
             </div>
-            <div className='mainSection'>
+            <div className='mainSection bg-hero-image w-full h-screen bg-cover bg-center'>
                 <FilterSection /> 
                 <HotelListContainer/>
             </div>

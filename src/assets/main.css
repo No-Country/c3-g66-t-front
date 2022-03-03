@@ -650,6 +650,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-full{
   width: 100%;
 }
+.w-0{
+  width: 0px;
+}
+.w-36{
+  width: 9rem;
+}
 .w-1\/2{
   width: 50%;
 }
@@ -808,14 +814,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-black\/20{
   background-color: rgb(0 0 0 / 0.2);
 }
+.bg-hero-image{
+  background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
+}
+.bg-background-login{
+  background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/20/08/2008427_v4.jpeg");
+}
 .bg-\[url\(\'https\:\/\/i0\.wp\.com\/foodandpleasure\.com\/wp-content\/uploads\/2018\/04\/akalki-0\.jpg\?fit\=1920\%2C820\&ssl\=1\'\)\]{
   background-image: url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1');
 }
 .bg-\[url\(\'https\:\/\/img2\.freepng\.es\/20180717\/cz\/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214\.7783760115318026250566\.jpg\'\)\]{
   background-image: url('https://img2.freepng.es/20180717/cz/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214.7783760115318026250566.jpg');
-}
-.bg-hero-image{
-  background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
 }
 .bg-cover{
   background-size: cover;
