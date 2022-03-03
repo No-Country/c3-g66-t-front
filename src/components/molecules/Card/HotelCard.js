@@ -3,8 +3,8 @@ import { VscTriangleRight } from "react-icons/vsc";
 
 function HotelCard( {title, city, country, mainImg, id} ) {
     return (
-   <div className="p-2">
-        <div className="w-60 p-15 rounded-lg mx-auto flex flex-col items-center">
+   <div className="p-5">
+        <div className="w-60 p-15 rounded-lg mx-auto flex flex-col items-center transform hover:scale-125 transition-all">
            <img className="w-70 h-80  rounded-full h-auto" src={mainImg} alt="" />
            <h3 className="text-lg font-bold text-neutral-200 px-2">{title}</h3>
             
