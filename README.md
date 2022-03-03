@@ -9,3 +9,4 @@
 * @material-ui/icons version 4.11.2
 * @material-ui/lab version 4.0.0-alpha.60
 * @reduxjs/toolkit version 1.7.2
+* swiper version 8.0.6
