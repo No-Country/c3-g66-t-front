@@ -30,7 +30,11 @@ const HotelList = ( {hotels} ) =>{
                 <SwiperSlide>  
                    <HotelCard
                       key={i}
-                      title={hotel.place_name}
+                      hotelId={hotel.id}
+                      mainImg={hotel.thumbnailUrl.srpDesktop}
+                      title={hotel.name}
+                      city={hotel.address.locality}
+                      country={hotel.address.countryName}
                    />
                 </SwiperSlide>
                ))
