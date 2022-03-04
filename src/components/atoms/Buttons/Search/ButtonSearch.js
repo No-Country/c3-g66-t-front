@@ -15,8 +15,8 @@ const Button = ( {location, date, locationChange, checkinChange, checkoutChange,
         errorGetLocation } = useSelector( store => store.SearchLocationReducer );
 
     const {
-        listHotels,
-        errorGetHotels } = useSelector( store => store.SearchListHotelsReducer );
+        hotelsList,
+        errorGetHotels } = useSelector( store => store.SearchHotelListReducer );
 
     const onSearch = async () => {
         dispatch(GetLocationAction({
