@@ -35,6 +35,9 @@ export const userSlice = createSlice({
         setSignUpStatus: (state, action) => {
             state.signUp.status = action.payload
         },
+        setSignUpLoading: (state, action) => {
+            state.signUp.loading = action.payload
+        },
         setSignUpErrors: (state, action) => {
             state.signUp.errors = action.payload
         },
@@ -45,22 +48,24 @@ export const userSlice = createSlice({
             state.signUp.message = '';
             state.signUp.errors = [];
             state.signUp.status = '';
+            state.signUp.loading = false;
         }
     }
 })
-export const { setUser, setLoading, setMessage, setLogged, setLoggedOut, setSignUpStatus, setSignUpErrors,setSignUpMessage,resetUserSignUp } = userSlice.actions
+export const { setUser, setLoading, setMessage, setLogged, setLoggedOut, setSignUpStatus,setSignUpLoading, setSignUpErrors,setSignUpMessage,resetUserSignUp } = userSlice.actions
 export const getUser = (data) => {
     return async (dispatch) => {
+        dispatch(setLoading(true))
         const userLogged = await loginService(data)
         if (userLogged) {
             //dispatch(setMessage(userLogged.message))
-            dispatch(setLoading(true))
             dispatch(setLoading(false))
             dispatch(setLogged(true))
             dispatch(setUser(userLogged.token))
             window.localStorage.setItem("token", userLogged.token)
         }
         else {
+            dispatch(setLoading(false))
             dispatch(setMessage('Credenciales incorrectas'))
             dispatch(setLogged(false))
         }
@@ -77,6 +82,7 @@ export const logout = () => {
 }
 export const register = (data) => {
     return async (dispatch) => {
+        dispatch(setSignUpLoading(true))
         try {
             await registerService(data)
             dispatch(setSignUpStatus('ok'))
@@ -87,6 +93,10 @@ export const register = (data) => {
             dispatch(setSignUpStatus('fail'))
             dispatch(setSignUpErrors(error.response.data.data))
             dispatch(setSignUpMessage(error.message))
+        }
+        finally{
+            dispatch(setSignUpLoading(false))
+            dispatch(setSignUpErrors([]))
         }
     }
 

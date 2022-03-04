@@ -9,11 +9,11 @@ const Hotels = () => {
         <div>
             <div>
               <Section />
-              <HotelListContainer/>
+              
             </div>
-            <div className='mainSection'>
+            <div className='mainSection bg-hero-image w-full h-screen bg-cover bg-center'>
                 <FilterSection /> 
-                
+                <HotelListContainer/>
             </div>
             <Footer/>
         </div>
