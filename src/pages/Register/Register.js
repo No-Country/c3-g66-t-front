@@ -5,14 +5,14 @@ import { useDispatch, useSelector } from "react-redux"
 import { register, resetUserSignUp } from "../../store/slices/user"
 import ToastPortal from "../../components/atoms/Toast"
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-
+import Loader from "../../components/atoms/Loader"
 import "./Register.css" 
 
 const Register = () => {
     let navigate = useNavigate();
     const dispatch = useDispatch()    
-    const {status, errors} = useSelector(state => state.user.signUp)
-    useEffect(()=>{
+    const {status, errors, loading} = useSelector(state => state.user.signUp)
+    useEffect(()=>{        
         if(status === "ok") {
             navigate('/login')
             dispatch(resetUserSignUp())
@@ -149,6 +149,7 @@ const Register = () => {
                         </Form>
                         <span className="text-center text-gray-500">¿Ya tienes una cuenta? <Link to="/login" className="text-blue-600 hover:underline underline-offset-8 ">¡Iniciar sesi&oacute;n! </Link > </span>
                     </div>
+                    {loading ? <Loader /> : ''}
                 </div>
         </Formik>
     )

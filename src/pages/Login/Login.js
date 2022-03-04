@@ -4,15 +4,17 @@ import { Link, useNavigate } from "react-router-dom"
 import { getUser, setMessage } from "../../store/slices/user"
 import ToastPortal from "../../components/atoms/Toast"
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Loader from "../../components/atoms/Loader"
 import "./Login.css"
 const Login = () => {
     let navigate = useNavigate();    
     const dispatch = useDispatch()    
-    const {message ,logged} = useSelector(state => state.user.user)
+    const {message ,logged, loading} = useSelector(state => state.user.user)
     useEffect(() => {
         if (logged) {
             navigate('/')
         }
+        dispatch(setMessage(''))
     }, [navigate,dispatch,logged])
 
     return (
@@ -70,6 +72,7 @@ const Login = () => {
                     </Form>
                     <span className="span-message">¿Todav&iacute;a no tienes una cuenta? <Link to='/register' className="text-blue-600 hover:underline underline-offset-8 ">¡Reg&iacute;strate! </Link > </span>
                 </div>
+                {loading ? <Loader />: ''}
             </div>
         </Formik>
     )
