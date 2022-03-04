@@ -1,16 +1,16 @@
 import { getList } from '../../../config/axios/axios';
 
-const defaultListHotels = {
-    listHotels: {}, 
+const defaultHotelList = {
+    hotelsList: [], 
     errorGetHotels: false
 };
 
 const SEARCHLISTHOTELS = 'SEARCHLISTHOTELS';
 const ERROR = 'ERROR';
 
-export default function SearchListHotelsReducer(state = defaultListHotels, { type, payload }) {
+export default function SearchHotelListReducer(state = defaultHotelList, { type, payload }) {
     switch(type){
-        case SEARCHLISTHOTELS: return {...state, listHotels: payload, errorGetHotels: false };
+        case SEARCHLISTHOTELS: return {...state, hotelsList: payload, errorGetHotels: false };
         case ERROR: return {...state, errorGetHotels: true};
         default: return state;
     }

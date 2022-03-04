@@ -3,12 +3,12 @@ import { createStore, combineReducers, applyMiddleware} from "redux"
 import { composeWithDevTools } from '@redux-devtools/extension'
 import thunk from 'redux-thunk'
 import SearchLocationReducer from "./slices/search/LocationReducer";
-import SearchListHotelsReducer from "./slices/search/ListHotelsReducer";
+import SearchHotelListReducer from "./slices/search/ListHotelsReducer";
 
 const reducer = combineReducers({
     user:  user,
     SearchLocationReducer,
-    SearchListHotelsReducer
+    SearchHotelListReducer
 })
 const store = createStore(
     reducer,
