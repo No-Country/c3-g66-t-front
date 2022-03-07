@@ -2,20 +2,27 @@ import { useState } from 'react';
 
 const Points = () => {
 
-    const [inputValue, setInputValue] = useState(10);
+    const [minPoint, setMinPoint] = useState('');
+    const [maxPoint, setMaxPoint] = useState('');
 
-    const getValue = (e) => {
-        setInputValue(e.target.value);
+    const getMinPoint = (e) => {
+        setMinPoint(e.target.value);
+    };
+    const getMaxPoint = (e) => {
+        setMaxPoint(e.target.value);
     };
 
     return (
-        <div className='pl-6 py-2 h-40 w-64 gap-4 flex flex-col items-start justify-center bg-gray-100'>
-            <h3 className='font-sans text-base text-stone-900'>Puntuación</h3>
-            <div className='flex items-center h-16 w-52 bg-white border border-gray-300 rounded-lg shadow-md'>
-                <div className="flex flex-row items-center justify-center p-2 h-28 w-44 gap-1.5">
-                    <div className="text-sm text-stone-900">0</div>
-                    <input onInput={getValue} type='range' min='0' max='10' step='1' value={inputValue}/>
-                    <div className="text-sm text-stone-900">{inputValue}</div>
+        <div className='pl-5 h-14 w-64 flex flex-col items-start justify-center bg-gray-100'>
+            <div className='flex flex-row items-center justify-start w-full gap-4'>
+                <div className="h-6 w-20 rounded shadow-md">
+                    <input className='p-2 h-full w-full bg-white border border-gray-400 rounded text-xs focus:outline-none'
+                    onInput={getMinPoint} type='number' min='0' max='10' placeholder='Mínimo' value={minPoint}/>
+                </div>
+                <span className='text-sm text-gray-400'>-</span>
+                <div className="h-6 w-20 rounded shadow-md">
+                    <input className='p-2 h-full w-full rounded bg-white border border-gray-400 text-xs focus:outline-none'
+                    onInput={getMaxPoint} type='number' min='0' max='10' placeholder='Máximo' value={maxPoint}/>
                 </div>
             </div>
         </div>

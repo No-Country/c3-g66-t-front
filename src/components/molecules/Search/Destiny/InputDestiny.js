@@ -33,7 +33,7 @@ const InputDestiny = ( {location, locationChange }) => {
 
     useEffect( () => {
         if (location === '') {
-            setShowSuggestions(false)
+            setShowSuggestions(false);
         }else if (isFocusInput){
             setShowSuggestions(true);
         }
@@ -42,7 +42,7 @@ const InputDestiny = ( {location, locationChange }) => {
     return (
         <div className='container-destiny'>
             <BiWorld className='iconWorld' />
-            <div className='container-input-destiny' onFocus={handleFocus} >
+            <div className='container-input-destiny' onFocus={handleFocus} onMouseLeave={() => setShowSuggestions(false)}>
                 <label form='destiny-value' className='title-destiny'>Destino
                     <input
                         className='destiny-value'
