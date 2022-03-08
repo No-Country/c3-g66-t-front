@@ -4,11 +4,13 @@ import { composeWithDevTools } from '@redux-devtools/extension'
 import thunk from 'redux-thunk'
 import SearchLocationReducer from "./slices/search/LocationReducer";
 import SearchHotelListReducer from "./slices/search/ListHotelsReducer";
+import FilterReducer from "./slices/filter/FilterReducer";
 
 const reducer = combineReducers({
     user:  user,
     SearchLocationReducer,
-    SearchHotelListReducer
+    SearchHotelListReducer,
+    FilterReducer
 })
 const store = createStore(
     reducer,

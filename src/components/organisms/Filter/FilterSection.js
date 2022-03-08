@@ -1,119 +1,240 @@
-import Points from '../../molecules/Filter/Points';
+import './filter.css';
+import { AiOutlineDown } from 'react-icons/ai';
+import { useState } from 'react';
+import Categories from '../../molecules/Filter/Categories';
+import Accomodation from '../../molecules/Filter/Accomodation';
+import Amenity from '../../molecules/Filter/Amenity';
 import Price from '../../molecules/Filter/Price';
 import Stars from '../../molecules/Filter/Stars';
-import OrderBy from '../../molecules/Filter/OrderBy';
-import { AiOutlineDown } from 'react-icons/ai';
-import { useEffect, useState } from 'react';
+import Points from '../../molecules/Filter/Points';
+import Button from '../../molecules/Filter/Button';
 
 const FilterSection = () => {
 
+    //Filter
     const [filterActive, setFilterActive] = useState(false);
+    const [categoriesActive, setCategoriesActive] = useState(false);
+    const [accomodationActive, setAccomodationActive] = useState(false);
+    const [amenityActive, setAmenityActive] = useState(false);
     const [priceActive, setPriceActive] = useState(false);
     const [starsActive, setStarsActive] = useState(false);
     const [pointsActive, setPointsActive] = useState(false);
-    const [orderByActive, setOrderByActive] = useState(false);
-    const [cleaned, setCleaned] = useState(false);
+    //Categories
+    const [categories, setCategories] = useState([{
+        beach: false,
+        historic: false,
+        business: false,
+        familyFriendly: false,
+        romantic: false,
+        spaHotel: false,
+        adventure: false
+    }]);
+    //Accomodation
+    const [accomodation, setAccomodation] = useState([{
+        hotels: false,
+        apartments: false,
+        hostels: false,
+        apartHotel:false,
+        resorts: false
+    }]);
+    //Amenity
+    const [amenities, setAmenities] = useState([{
+        wifi: false,
+        parking: false
+    }]);
+    //Prices
+    const [minPrice, setMinPrice] = useState('');
+    const [maxPrice, setMaxPrice] = useState('');
+    const [price, setPrice] = useState([{
+        hasta50mil: false,
+        de50milA100mil: false,
+        masDe100mil: false
+    }]);
+    //Stars
+    const [stars, setStars] = useState([{
+        fiveStarsChecked: false,
+        fourStarsChecked: false,
+        threeStarsChecked: false,
+        twoStarsChecked: false,
+        oneStarChecked: false
+    }]);
+    //Points
+    const [minPoint, setMinPoint] = useState('');
+    const [maxPoint, setMaxPoint] = useState('');
 
+    //Filter functions
+    const onShowFilter = () => {
+        if (!filterActive){
+            setFilterActive(true);
+        } else if (filterActive){
+            setFilterActive(false);
+        };
+    };
+    const onShowCategories = () => {
+        if (!categoriesActive){
+            setCategoriesActive(true);
+        } else if (categoriesActive){
+            setCategoriesActive(false);
+        };
+    };
+    const onShowAccomodation = () => {
+        if (!accomodationActive){
+            setAccomodationActive(true);
+        } else if (accomodationActive){
+            setAccomodationActive(false);
+        };
+    };
+    const onShowAmenity = () => {
+        if (!amenityActive){
+            setAmenityActive(true);
+        } else if (amenityActive){
+            setAmenityActive(false);
+        };
+    };
     const onShowPrice = () => {
         if (!priceActive){
-           setPriceActive(true); 
+            setPriceActive(true); 
         } else if (priceActive){
             setPriceActive(false); 
         };
     };
-
-    const onShowFilter = () => {
-        if (!filterActive){
-            setFilterActive(true);
-         } else if (filterActive){
-            setFilterActive(false);
-         };
-    };
-
     const onShowStars = () => {
         if (!starsActive){
             setStarsActive(true);
-         } else if (starsActive){
+        } else if (starsActive){
             setStarsActive(false);
-         };
+        };
     };
-
     const onShowPoints = () => {
         if (!pointsActive){
             setPointsActive(true);
-         } else if (pointsActive){
+        } else if (pointsActive){
             setPointsActive(false);
-         };
+        };
     };
-
-    const onShowOrderBy = () => {
-        if (!orderByActive){
-            setOrderByActive(true);
-         } else if (orderByActive){
-            setOrderByActive(false);
-         };
+    //Categories function
+    const onClickCategory = (newValue) => {
+        setCategories(newValue);
     };
-
+    //Accomodation function
+    const onClickAccomodation = (newValue) => {
+        setAccomodation(newValue);
+    };
+    //Amenity function
+    const onClickAmenity = (newValue) => {
+        setAmenities(newValue);
+    };
+    //Prices functions
+    const getMinPrice = (newMinPrice) => {
+        setMinPrice(newMinPrice);
+    };
+    const getMaxPrice = (newMaxPrice) => {
+        setMaxPrice(newMaxPrice);
+    };
+    const onClickPrice = (newValue) => {
+        setPrice(newValue);
+    };
+    //Stars function
+    const onChangeStarsChecked = (newValue) => {
+        setStars(newValue);
+        console.log(stars);
+    };
+    //Points functions
+    const getMinPoint = (newMinPoint) => {
+        setMinPoint(newMinPoint);
+    };
+    const getMaxPoint = (newMaxPoint) => {
+        setMaxPoint(newMaxPoint);
+    };
+    //Clean Filter function
     const onClean = () => {
-        setCleaned(true);
+        setMinPrice('');
+        setMaxPrice('');
+        setPrice([{
+            hasta50mil: false,
+            de50milA100mil: false,
+            masDe100mil: false}]);
+        setStars([{
+            fiveStarsChecked: false,
+            fourStarsChecked: false,
+            threeStarsChecked: false,
+            twoStarsChecked: false,
+            oneStarChecked: false}]);
+        setMinPoint('');
+        setMaxPoint('');
+        setAccomodation([{
+            hotels: false,
+            apartments: false,
+            hostels: false,
+            apartHotel:false,
+            resorts: false}]);
+        setAmenities([{
+            wifi: false,
+            parking: false}]);
+        setCategories([{
+            beach: false,
+            business: false,
+            familyFriendly: false,
+            romantic: false,
+            spaHotel: false}]);
     };
-
-    /* LIMPIAR FILTRO
-    useEffect(() => {
-        if (cleaned){
-
-        }
-    }, [cleaned]);*/
 
     return (
-        <div className='h-10 w-full flex flex-row justify-between bg-white'>
-            <div className='bg-gray-100 w-64 absolute z-10' onMouseLeave={() => setFilterActive(false)}>
-                <div className='flex flex-row items-center gap-1 pl-5 py-2 w-64 h-10 bg-white text-stone-900' >
-                    <h3 className='text-base cursor-pointer' onClick={onShowFilter} >Filtrar Alojamientos</h3>
-                    {!filterActive && <AiOutlineDown className='text-xs mt-1 text-gray-500' onClick={onShowFilter}/>}
-                    {filterActive && <AiOutlineDown className='text-xs mt-1 text-gray-400' onClick={onShowFilter}/>}
+        <div className='containter-filter'>
+            <div className='filter' onMouseLeave={() => setFilterActive(true)}>
+                <div className='container-main-title-icon' >
+                    <h3 className='filter-title' onClick={onShowFilter} >Filtrar Búsqueda</h3>
+                    {!filterActive ? <AiOutlineDown className='icons-closed' onClick={onShowFilter}/> : <AiOutlineDown className='icons-open' onClick={onShowFilter}/>}
                 </div>
                 {filterActive && <div className='w-64'>
-                    <div className='flex flex-col items-start hover:bg-white'>
-                        <ul className='flex flex-row items-center gap-1 pl-5 py-2'>
-                            <li className='text-sm cursor-pointer font-semibold' onClick={onShowPrice}>Precio</li>
-                            {!priceActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-500 cursor-pointer' onClick={onShowPrice}/>}
-                            {priceActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-400 cursor-pointer' onClick={onShowPrice}/>}
+                    <div className='container-filters-titles'>
+                        <ul className='containter-icons-titles' onClick={onShowCategories}>
+                            <li className='filter-titles'>Categorías</li>
+                            {!categoriesActive ? <AiOutlineDown className='icons-closed'/> : <AiOutlineDown className='icons-open' onClick={onShowCategories}/>}
                         </ul>
-                        {priceActive && <Price/>}
+                        {categoriesActive && <Categories categories={categories} onClickCategory={onClickCategory} />}
+                    </div>
+                    <div className='container-filters-titles'>
+                        <ul className='containter-icons-titles' onClick={onShowAccomodation}>
+                            <li className='filter-titles'>Alojamientos</li>
+                            {!accomodationActive ? <AiOutlineDown className='icons-closed'/> : <AiOutlineDown className='icons-open' onClick={onShowAccomodation}/>}
+                        </ul>
+                        {accomodationActive && <Accomodation accomodation={accomodation} onClickAccomodation={onClickAccomodation} />}
+                    </div>
+                    <div className='container-filters-titles'>
+                        <ul className='containter-icons-titles' onClick={onShowAmenity}>
+                            <li className='filter-titles'>Comodidades</li>
+                            {!amenityActive ? <AiOutlineDown className='icons-closed'/> : <AiOutlineDown className='icons-open' onClick={onShowAmenity}/>}
+                        </ul>
+                        {amenityActive && <Amenity amenities={amenities} onClickAmenity={onClickAmenity}/>}
                     </div> 
-                    <div className='flex flex-col items-start hover:bg-white'>
-                        <ul className='flex flex-row items-center gap-1 pl-5 py-2'>
-                            <li className='text-sm cursor-pointer font-semibold' onClick={onShowStars}>Calidad</li>
-                            {!starsActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-500 cursor-pointer' onClick={onShowStars}/>}
-                            {starsActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-400 cursor-pointer' onClick={onShowStars}/>}
+                    <div className='container-filters-titles'>
+                        <ul className='containter-icons-titles' onClick={onShowPrice}>
+                            <li className='filter-titles'>Precio</li>
+                            {!priceActive ? <AiOutlineDown className='icons-closed'/> : <AiOutlineDown className='icons-open' onClick={onShowPrice}/>}
                         </ul>
-                        {starsActive && <Stars/>}
-                    </div>
-                    <div className='flex flex-col items-start hover:bg-white'>
-                        <ul className='flex flex-row items-center gap-1 pl-5 py-2'>
-                            <li className='text-sm cursor-pointer font-semibold' onClick={onShowPoints}>Calificación</li>
-                            {!pointsActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-500 cursor-pointer' onClick={onShowPoints}/>}
-                            {pointsActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-400 cursor-pointer' onClick={onShowPoints}/>}
+                        {priceActive && <Price minPrice={minPrice} maxPrice={maxPrice} onChangeMinPrice={getMinPrice} onChangeMaxPrice={getMaxPrice} price={price} onClickPrice={onClickPrice}/>}
+                    </div> 
+                    <div className='container-filters-titles'>
+                        <ul className='containter-icons-titles' onClick={onShowStars}>
+                            <li className='filter-titles'>Calidad</li>
+                            {!starsActive ? <AiOutlineDown className='icons-closed'/> : <AiOutlineDown className='icons-open' onClick={onShowStars}/>}
                         </ul>
-                        {pointsActive && <Points/>}
+                        {starsActive && <Stars stars={stars} onChangeStarsChecked={onChangeStarsChecked}/>}
                     </div>
-                    <div className='flex flex-col items-start hover:bg-white'>
-                        <ul className='flex flex-row items-center gap-1 pl-5 py-2'>
-                            <li className='text-sm cursor-pointer font-semibold' onClick={onShowOrderBy}>Ordenar por</li>
-                            {!orderByActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-500 cursor-pointer' onClick={onShowOrderBy}/>}
-                            {orderByActive && <AiOutlineDown className='text-xs mt-0.5 text-gray-400 cursor-pointer' onClick={onShowOrderBy}/>}
+                    <div className='container-filters-titles'>
+                        <ul className='containter-icons-titles' onClick={onShowPoints}>
+                            <li className='filter-titles'>Calificación</li>
+                            {!pointsActive ? <AiOutlineDown className='icons-closed'/> : <AiOutlineDown className='icons-open' onClick={onShowPoints}/>}
                         </ul>
-                        {orderByActive && <OrderBy/>}
+                        {pointsActive && <Points minPoint={minPoint} maxPoint={maxPoint} onChangeMinPoint={getMinPoint} onChangeMaxPoint={getMaxPoint}/>}
                     </div>
-                    <div className='flex flex-row justify-center items-center gap-2 pb-3 pt-2'>
-                        <button className='text-xs hover:bg-gray-200 border hover:border-gray-300 hover:text-gray-800 font-semibold w-24 h-8
-                         text-gray-900 bg-white border-gray-400 rounded-lg cursor-pointer duration-700'>Filtrar</button>
-                        <h4 className='text-xs font-semibold hover:text-gray-700 text-stone-900 hover:cursor-pointer duration-700' onClick={onClean}>Limpiar Filtros</h4>
+                    <div className='container-button-clean'>
+                        <Button categories={categories} accomodation={accomodation} amenities={amenities} price={price} minPrice={minPrice} maxPrice={maxPrice} stars={stars} minPoint={minPoint} maxPoint={maxPoint}/>
+                        <h4 className='clean-filter' onClick={onClean}>Limpiar Filtros</h4>
                     </div>
                 </div>}
             </div>
-            <h3>X Resultados</h3>
         </div>
     )
 }

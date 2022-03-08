@@ -31,7 +31,6 @@ const getList = axios.create({
         page_number: 1,
         currency: 'ARS',
         locale: 'es_ES',
-        sort_order: 'STAR_RATING_HIGHEST_FIRST'  
     }
 });
 
