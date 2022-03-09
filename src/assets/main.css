@@ -533,6 +533,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .absolute{
   position: absolute;
 }
+.relative{
+  position: relative;
+}
 .inset-0{
   top: 0px;
   right: 0px;
@@ -563,10 +566,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .m-5{
   margin: 1.25rem;
 }
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
-}
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -593,14 +592,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-2{
   margin-top: 0.5rem;
 }
-.mb-6{
-  margin-bottom: 1.5rem;
+.mb-8{
+  margin-bottom: 2rem;
 }
 .mb-2{
   margin-bottom: 0.5rem;
 }
+.mt-8{
+  margin-top: 2rem;
+}
+.mr-2{
+  margin-right: 0.5rem;
+}
 .mb-1{
   margin-bottom: 0.25rem;
+}
+.mb-6{
+  margin-bottom: 1.5rem;
 }
 .mb-0\.5{
   margin-bottom: 0.125rem;
@@ -611,6 +619,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .block{
   display: block;
 }
+.inline-block{
+  display: inline-block;
+}
 .flex{
   display: flex;
 }
@@ -620,11 +631,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid{
   display: grid;
 }
+.contents{
+  display: contents;
+}
 .hidden{
   display: none;
-}
-.h-screen{
-  height: 100vh;
 }
 .h-44{
   height: 11rem;
@@ -632,8 +643,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-8{
   height: 2rem;
 }
-.h-auto{
-  height: auto;
+.h-1{
+  height: 0.25rem;
 }
 .h-32{
   height: 8rem;
@@ -653,6 +664,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-28{
   height: 7rem;
 }
+.h-screen{
+  height: 100vh;
+}
+.max-h-48{
+  max-height: 12rem;
+}
 .min-h-screen{
   min-height: 100vh;
 }
@@ -668,8 +685,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-8{
   width: 2rem;
 }
-.w-60{
-  width: 15rem;
+.w-0{
+  width: 0px;
 }
 .w-40{
   width: 10rem;
@@ -700,6 +717,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+@keyframes bounce{
+
+
+  0%, 100%{
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+
+  50%{
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce{
+  animation: bounce 1s infinite;
+}
+.cursor-default{
+  cursor: default;
 }
 .cursor-pointer{
   cursor: pointer;
@@ -761,6 +798,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .self-center{
   align-self: center;
 }
+.overflow-hidden{
+  overflow: hidden;
+}
 .rounded-lg{
   border-radius: 0.5rem;
 }
@@ -811,6 +851,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
+.bg-green-400{
+  --tw-bg-opacity: 1;
+  background-color: rgb(74 222 128 / var(--tw-bg-opacity));
+}
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -822,18 +866,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-black\/20{
   background-color: rgb(0 0 0 / 0.2);
 }
-.bg-blue-200{
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
-}
-.bg-hero-image{
-  background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
-}
 .bg-\[url\(\'https\:\/\/i0\.wp\.com\/foodandpleasure\.com\/wp-content\/uploads\/2018\/04\/akalki-0\.jpg\?fit\=1920\%2C820\&ssl\=1\'\)\]{
   background-image: url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1');
 }
 .bg-\[url\(\'https\:\/\/img2\.freepng\.es\/20180717\/cz\/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214\.7783760115318026250566\.jpg\'\)\]{
   background-image: url('https://img2.freepng.es/20180717/cz/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214.7783760115318026250566.jpg');
+}
+.bg-hero-image{
+  background-image: url("./Img-fondo-main/nathalie-buss-HYST-KUIu-s-unsplash.jpg");
 }
 .bg-cover{
   background-size: cover;
@@ -844,20 +884,26 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-no-repeat{
   background-repeat: no-repeat;
 }
+.object-cover{
+  object-fit: cover;
+}
+.p-5{
+  padding: 1.25rem;
+}
 .p-3{
   padding: 0.75rem;
 }
 .p-2{
   padding: 0.5rem;
 }
-.p-5{
-  padding: 1.25rem;
+.p-4{
+  padding: 1rem;
+}
+.p-20{
+  padding: 5rem;
 }
 .p-8{
   padding: 2rem;
-}
-.p-4{
-  padding: 1rem;
 }
 .px-3{
   padding-left: 0.75rem;
@@ -867,17 +913,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-.px-4{
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 .pl-5{
   padding-left: 1.25rem;
@@ -904,17 +950,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-lg{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-.text-9xl{
-  font-size: 8rem;
-  line-height: 1;
 }
 .text-2xl{
   font-size: 1.5rem;
@@ -928,15 +970,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 3.75rem;
   line-height: 1;
 }
-.text-base{
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
 .font-medium{
   font-weight: 500;
-}
-.font-bold{
-  font-weight: 700;
 }
 .font-semibold{
   font-weight: 600;
@@ -967,13 +1002,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.text-neutral-200{
+.text-black{
   --tw-text-opacity: 1;
-  color: rgb(229 229 229 / var(--tw-text-opacity));
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-slate-200{
+.text-slate-400{
   --tw-text-opacity: 1;
-  color: rgb(226 232 240 / var(--tw-text-opacity));
+  color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 .text-indigo-300{
   --tw-text-opacity: 1;
@@ -1019,6 +1054,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-xl{
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-md{
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -1046,6 +1086,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-150{
   transition-duration: 150ms;
 }
 .duration-700{
@@ -1117,6 +1160,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+.group:hover .group-hover\:w-48{
+  width: 12rem;
+}
 @media (prefers-reduced-motion: reduce){
 
 
@@ -1128,6 +1174,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   .motion-reduce\:hover\:translate-y-0:hover{
     --tw-translate-y: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+}
+@media (min-width: 640px){
+
+
+  .sm\:max-h-full{
+    max-height: 100%;
+  }
+
+
+  .sm\:max-w-xs{
+    max-width: 20rem;
   }
 }
 @media (min-width: 768px){

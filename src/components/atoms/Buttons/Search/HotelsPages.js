@@ -24,6 +24,7 @@ const HotelsPages = () => {
         }
     };
 
+    //esto hace que se renderize 1 vez antes del filtro, revisar
     useEffect(() => {
         setPage_number(1);
     }, [dataFilter.categories]);
