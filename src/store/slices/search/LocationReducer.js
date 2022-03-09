@@ -25,11 +25,6 @@ export default function SearchLocationReducer(state = defaultLocation, { type, p
 //acciones:
 export const GetLocationAction = ({ 
     location,
-    date,
-    locationChange,
-    checkinChange,
-    checkoutChange,
-    adults_numberChange,
     navigate}) => async (dispatch) => {
 
     try {
@@ -37,11 +32,6 @@ export const GetLocationAction = ({
             const response = await searchLocation.get(`/location/${location}`);
             const longitude = response.data.data[0].longitude;
             const latitude = response.data.data[0].latitude;
-            //Limpiamos buscador al hacer click en buscar:
-            locationChange('');
-            checkinChange(date);
-            checkoutChange(date);
-            adults_numberChange(2);
             navigate('/hotels');
             dispatch({
                 type: SEARCHLOCATION,

@@ -9,10 +9,9 @@ const Hotels = () => {
         <div>
             <div>
               <Section />
-              
             </div>
+            <FilterSection /> 
             <div className='mainSection bg-hero-image w-full h-screen bg-cover bg-center'>
-                <FilterSection /> 
                 <HotelListContainer/>
             </div>
             <Footer/>
