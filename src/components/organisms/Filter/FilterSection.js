@@ -20,44 +20,44 @@ const FilterSection = () => {
     const [starsActive, setStarsActive] = useState(false);
     const [pointsActive, setPointsActive] = useState(false);
     //Categories
-    const [categories, setCategories] = useState([{
-        beach: false,
-        historic: false,
-        business: false,
-        familyFriendly: false,
-        romantic: false,
-        spaHotel: false,
-        adventure: false
-    }]);
+    const [categories, setCategories] = useState({
+        beach: 0,
+        historic: 0,
+        business: 0,
+        familyFriendly: 0,
+        romantic: 0,
+        spaHotel: 0,
+        adventure: 0
+    });
     //Accomodation
-    const [accomodation, setAccomodation] = useState([{
-        hotels: false,
-        apartments: false,
-        hostels: false,
-        apartHotel:false,
-        resorts: false
-    }]);
+    const [accomodation, setAccomodation] = useState({
+        hotels: 0,
+        apartments: 0,
+        hostels: 0,
+        apartHotel:0,
+        resorts: 0
+    });
     //Amenity
-    const [amenities, setAmenities] = useState([{
-        wifi: false,
-        parking: false
-    }]);
+    const [amenities, setAmenities] = useState({
+        wifi: 0,
+        parking: 0
+    });
     //Prices
     const [minPrice, setMinPrice] = useState('');
     const [maxPrice, setMaxPrice] = useState('');
-    const [price, setPrice] = useState([{
-        hasta50mil: false,
-        de50milA100mil: false,
-        masDe100mil: false
-    }]);
+    const [price, setPrice] = useState({
+        hasta50mil: 0,
+        de50milA100mil: 0,
+        masDe100mil: 0
+    });
     //Stars
-    const [stars, setStars] = useState([{
-        fiveStarsChecked: false,
-        fourStarsChecked: false,
-        threeStarsChecked: false,
-        twoStarsChecked: false,
-        oneStarChecked: false
-    }]);
+    const [stars, setStars] = useState({
+        fiveStarsChecked: 0,
+        fourStarsChecked: 0,
+        threeStarsChecked: 0,
+        twoStarsChecked: 0,
+        oneStarChecked: 0
+    });
     //Points
     const [minPoint, setMinPoint] = useState('');
     const [maxPoint, setMaxPoint] = useState('');
@@ -137,7 +137,6 @@ const FilterSection = () => {
     //Stars function
     const onChangeStarsChecked = (newValue) => {
         setStars(newValue);
-        console.log(stars);
     };
     //Points functions
     const getMinPoint = (newMinPoint) => {
@@ -150,38 +149,40 @@ const FilterSection = () => {
     const onClean = () => {
         setMinPrice('');
         setMaxPrice('');
-        setPrice([{
-            hasta50mil: false,
-            de50milA100mil: false,
-            masDe100mil: false}]);
-        setStars([{
-            fiveStarsChecked: false,
-            fourStarsChecked: false,
-            threeStarsChecked: false,
-            twoStarsChecked: false,
-            oneStarChecked: false}]);
+        setPrice({
+            hasta50mil: 0,
+            de50milA100mil: 0,
+            masDe100mil: 0});
+        setStars({
+            fiveStarsChecked: 0,
+            fourStarsChecked: 0,
+            threeStarsChecked: 0,
+            twoStarsChecked: 0,
+            oneStarChecked: 0});
         setMinPoint('');
         setMaxPoint('');
-        setAccomodation([{
-            hotels: false,
-            apartments: false,
-            hostels: false,
-            apartHotel:false,
-            resorts: false}]);
-        setAmenities([{
-            wifi: false,
-            parking: false}]);
-        setCategories([{
-            beach: false,
-            business: false,
-            familyFriendly: false,
-            romantic: false,
-            spaHotel: false}]);
+        setAccomodation({
+            hotels: 0,
+            apartments: 0,
+            hostels: 0,
+            apartHotel:0,
+            resorts: 0});
+        setAmenities({
+            wifi: 0,
+            parking: 0});
+        setCategories({
+            beach: 0,
+            historic: 0,
+            business: 0,
+            familyFriendly: 0,
+            romantic: 0,
+            spaHotel: 0,
+            adventure: 0});
     };
 
     return (
         <div className='containter-filter'>
-            <div className='filter' onMouseLeave={() => setFilterActive(true)}>
+            <div className='filter' onMouseLeave={() => setFilterActive(false)}>
                 <div className='container-main-title-icon' >
                     <h3 className='filter-title' onClick={onShowFilter} >Filtrar Búsqueda</h3>
                     {!filterActive ? <AiOutlineDown className='icons-closed' onClick={onShowFilter}/> : <AiOutlineDown className='icons-open' onClick={onShowFilter}/>}

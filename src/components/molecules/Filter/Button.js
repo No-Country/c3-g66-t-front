@@ -5,10 +5,6 @@ const Button = ( {categories, accomodation, amenities, price, minPrice, maxPrice
 
     const dispatch = useDispatch();
 
-    /*const {
-        dataFilter,
-        errorGetData } = useSelector( store => store.FilterReducer );*/
-
     const onFilter = () => {
         dispatch(FilterAction({
             categories, accomodation, amenities, price, minPrice, maxPrice, stars, minPoint, maxPoint})

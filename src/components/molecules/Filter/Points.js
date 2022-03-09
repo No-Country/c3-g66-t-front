@@ -13,12 +13,12 @@ const Points = ( {minPoint, maxPoint, onChangeMinPoint, onChangeMaxPoint} ) => {
             <div className='flex flex-row items-center justify-start w-full gap-4'>
                 <div className="h-6 w-20 rounded shadow-md">
                     <input className='p-2 h-full w-full bg-white border border-gray-400 rounded text-xs focus:outline-none'
-                    onInput={getMinPoint} type='number' min='0' max='10' placeholder='Mínimo' value={minPoint}/>
+                    onInput={getMinPoint} type='number' min='1' max='5' placeholder='Mínimo' value={minPoint}/>
                 </div>
                 <span className='text-sm text-gray-400'>-</span>
                 <div className="h-6 w-20 rounded shadow-md">
                     <input className='p-2 h-full w-full rounded bg-white border border-gray-400 text-xs focus:outline-none'
-                    onInput={getMaxPoint} type='number' min='0' max='10' placeholder='Máximo' value={maxPoint}/>
+                    onInput={getMaxPoint} type='number' min='1' max='5' placeholder='Máximo' value={maxPoint}/>
                 </div>
             </div>
         </div>

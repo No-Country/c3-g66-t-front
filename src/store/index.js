@@ -5,12 +5,14 @@ import thunk from 'redux-thunk'
 import SearchLocationReducer from "./slices/search/LocationReducer";
 import SearchHotelListReducer from "./slices/search/ListHotelsReducer";
 import FilterReducer from "./slices/filter/FilterReducer";
+import FilterHotelsListReducer from "./slices/filter/HotelsFilterReducer";
 
 const reducer = combineReducers({
     user:  user,
     SearchLocationReducer,
     SearchHotelListReducer,
-    FilterReducer
+    FilterReducer,
+    FilterHotelsListReducer
 })
 const store = createStore(
     reducer,

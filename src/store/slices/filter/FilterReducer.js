@@ -25,25 +25,18 @@ export const FilterAction = ({
     minPoint,
     maxPoint}) => async (dispatch) => {
 
-    try{
         dispatch({
-            type: FILTER,
-            payload: { 
-                categories: categories,
-                accomodation: accomodation,
-                amenities: amenities,
-                price: price,
-                minPrice: minPrice,
-                maxPrice: maxPrice,
-                stars: stars,
-                minPoint: minPoint,
-                maxPoint: maxPoint
-            }
-        });
-    } catch( errorGetDataFilter ) {
-        dispatch({
-            type: ERROR,
-        })
-    }
-    
+        type: FILTER,
+        payload: { 
+            categories,
+            accomodation,
+            amenities,
+            price,
+            minPrice,
+            maxPrice,
+            stars,
+            minPoint,
+            maxPoint
+        }
+    }); 
 }
