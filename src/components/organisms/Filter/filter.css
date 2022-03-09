@@ -1,0 +1,33 @@
+.containter-filter{
+    @apply h-10 w-full flex flex-row justify-between bg-white;
+}
+.filter{
+    @apply bg-gray-100 w-64 absolute z-10;
+}
+.container-main-title-icon{
+    @apply flex flex-row items-center gap-1 pl-5 py-2 w-64 h-10 bg-white text-stone-900;
+}
+.filter-title{
+    @apply text-base cursor-pointer;
+}
+.container-filters-titles{
+    @apply flex flex-col items-start hover:bg-white;
+}
+.containter-icons-titles{
+    @apply flex flex-row items-center gap-1 pl-5 py-2;
+}
+.filter-titles{
+    @apply text-sm cursor-pointer font-semibold;
+}
+.icons-closed{
+    @apply text-xs mt-0.5 text-gray-500 cursor-pointer;
+}
+.icons-open{
+    @apply text-xs mt-0.5 text-gray-400 cursor-pointer;
+}
+.container-button-clean{
+    @apply flex flex-row justify-center items-center gap-2 pb-3 pt-2;
+}
+.clean-filter{
+    @apply text-xs font-semibold hover:text-gray-700 text-stone-900 hover:cursor-pointer duration-700;
+}
