@@ -25,9 +25,9 @@ const HotelListContainer = () => {
    return(
        <>
          
-            
+        <div className="p-20">
             <HotelList hotels={hotels} />
-         
+        </div>   
        </>
    );
 }
