@@ -18,7 +18,6 @@ const HotelListContainer = () => {
 
     useEffect(() => {
         setHotels(list.hotelsList);
-        console.log(list.hotelsList);
     }, [list]);
 
 

@@ -657,10 +657,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-32{
   height: 8rem;
+<<<<<<< HEAD
 }
 .h-14{
   height: 3.5rem;
 }
+=======
+}
+.h-14{
+  height: 3.5rem;
+}
+>>>>>>> e1aba3ec594fcc1a9dce8207dd529a5a56c0be3b
 .h-10{
   height: 2.5rem;
 }
@@ -1062,11 +1069,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(165 180 252 / var(--tw-text-opacity));
 }
 .text-gray-400{
+<<<<<<< HEAD
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .text-gray-900{
   --tw-text-opacity: 1;
+=======
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+.text-gray-900{
+  --tw-text-opacity: 1;
+>>>>>>> e1aba3ec594fcc1a9dce8207dd529a5a56c0be3b
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 .text-yellow-400{
