@@ -24,7 +24,7 @@ const HotelListContainer = () => {
    return(
        <>
          
-        <div className="p-20">
+        <div className="grid gap-4">
             <HotelList hotels={hotels} />
         </div>   
        </>

@@ -8,7 +8,7 @@ function HotelCard( {title, city, country, mainImg, key, price} ) {
                 <img className="relative w-full sm:max-w-xs sm:max-h-full max-h-48 object-cover" src={mainImg} alt="Img-hoteles" />
             </a>
             <div className="relative flex flex-col p-4">
-                <h1 className="text-3xl mb-2 text-black">{title}</h1>
+                <h1 className="text-lg mb-2 text-black">{title}</h1>
                 <div className="small mb-2">
                     <p className="text-slate-400">{city}</p>
                 </div>
