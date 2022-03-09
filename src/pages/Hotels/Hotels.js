@@ -3,6 +3,7 @@ import Footer from '../../components/organisms/Footer/Footer';
 import FilterSection from "../../components/organisms/Filter/FilterSection";
 import HotelListContainer from "../../components/organisms/CardSection/HotelListContainer";
 import './hotels.css';
+import HotelsPages from "../../components/atoms/Buttons/Search/HotelsPages";
 
 const Hotels = () => {
     return (
@@ -14,6 +15,7 @@ const Hotels = () => {
             <div className='mainSection bg-hero-image w-full h-screen bg-cover bg-center'>
                 <HotelListContainer/>
             </div>
+            <HotelsPages/>
             <Footer/>
         </div>
     )

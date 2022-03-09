@@ -96,7 +96,10 @@ const Button = ( {location, checkin_date, checkout_date, adults_number, date, lo
                 star_rating_ids,
                 price_min,
                 price_max})
-            ); 
+            );
+            if (dataFilter.hotelsFilter === []){
+                alert('No hay resultados de lo buscado');
+            }
         }
     }, [dataFilter] );
 
