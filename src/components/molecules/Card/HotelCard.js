@@ -1,6 +1,6 @@
 import {AiTwotoneEnvironment} from "react-icons/ai"
 import { VscTriangleRight } from "react-icons/vsc";
-
+import { Link } from "react-router-dom";
 function HotelCard( {title, city, country, mainImg, key} ) {
     return (
    <div className="p-5">
@@ -15,7 +15,7 @@ function HotelCard( {title, city, country, mainImg, key} ) {
                 </div>
                 <div className="flex items-center">
                     <VscTriangleRight className="text-slate-200" />
-                    <a className="px-1 text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0" href=""> Ver detalles</a>
+                    <Link className="px-1 text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0"to="/hotels/hola"> Ver detalles</Link>
                  </div>  
             </div>     
          </div>
