@@ -17,10 +17,7 @@ export default function FilterHotelsListReducer(state = defaultFilterValue, { ty
 }
 
 export const GetHotelsFilteredAction = ({ 
-    locations,
-    checkin_date,
-    checkout_date,
-    adults_number,
+    data,
     amenity_ids,
     theme_ids,
     accommodation_ids,
@@ -30,14 +27,14 @@ export const GetHotelsFilteredAction = ({
     price_max   }) => async (dispatch) => {
 
     try {
-        if (locations.latitude !== 0 && locations.longitude !== 0){
+        if (data.locations.latitude !== 0 && data.locations.longitude !== 0){
             const response = await getList.get(`/hotel/list?`, {
             params: {
-                latitude: locations.latitude,
-                longitude: locations.longitude,
-                checkin_date,
-                checkout_date,
-                adults_number, 
+                latitude: data.locations.latitude,
+                longitude: data.locations.longitude,
+                checkin_date: data.checkin_date,
+                checkout_date: data.checkout_date,
+                adults_number: data.adults_number,
                 amenity_ids,
                 theme_ids,
                 accommodation_ids,

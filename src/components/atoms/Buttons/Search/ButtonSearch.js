@@ -8,29 +8,33 @@ import { GetHotelsFilteredAction } from '../../../../store/slices/filter/HotelsF
 
 const Button = ( {location, checkin_date, checkout_date, adults_number, date, locationChange, checkinChange, checkoutChange, adults_numberChange} ) => {
 
-    const { locations } = useSelector( store => store.SearchLocationReducer );
+    const { data } = useSelector( store => store.SearchLocationReducer );
     const { dataFilter } = useSelector( store => store.FilterReducer );
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
     //Buscador latitud, longitud al hacer click en buscar
-    const onSearch = async () => {
+    const onSearch = async (e) => {
+        e.preventDefault();
         dispatch(GetLocationAction({
             location,
+            checkin_date,
+            checkout_date,
+            adults_number,
             navigate})
         );
-    }
+        //Limpiamos buscador:
+        locationChange('');
+        checkinChange(date);
+        checkoutChange(date);
+        adults_numberChange(2);
+    };
 
     //Buscador
     useEffect( () => {
-        dispatch(GetListHotelsAction({
-            locations,
-            checkin_date,
-            checkout_date,
-            adults_number})
-        );
-    }, [locations] );
+        dispatch(GetListHotelsAction({ data }));
+    }, [data] );
 
     //Filtro
     useEffect( () => {
@@ -84,10 +88,7 @@ const Button = ( {location, checkin_date, checkout_date, adults_number, date, lo
             (pointsFiltered !== '') ? guest_rating_min = pointsFiltered : guest_rating_min = null;
             
             dispatch(GetHotelsFilteredAction({
-                locations,
-                checkin_date,
-                checkout_date,
-                adults_number,
+                data,
                 amenity_ids,
                 theme_ids,
                 accommodation_ids,
@@ -95,7 +96,10 @@ const Button = ( {location, checkin_date, checkout_date, adults_number, date, lo
                 star_rating_ids,
                 price_min,
                 price_max})
-            ); 
+            );
+            if (dataFilter.hotelsFilter === []){
+                alert('No hay resultados de lo buscado');
+            }
         }
     }, [dataFilter] );
 

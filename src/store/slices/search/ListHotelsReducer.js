@@ -16,27 +16,18 @@ export default function SearchHotelListReducer(state = defaultHotelList, { type,
     }
 }
 
-export const GetListHotelsAction = ({ 
-    locations,
-    checkin_date,
-    checkout_date,
-    adults_number }) => async (dispatch) => {
-
+export const GetListHotelsAction = ({ data, page_number }) => async (dispatch) => {
     try {
-        if (locations.latitude !== 0 && locations.longitude !== 0){
+        if (data.locations.latitude !== 0 && data.locations.longitude !== 0){
             const response = await getList.get(`/hotel/list?`, {
             params: {
-                latitude: locations.latitude,
-                longitude: locations.longitude,
-                checkin_date,
-                checkout_date,
-                adults_number
+                latitude: data.locations.latitude,
+                longitude: data.locations.longitude,
+                checkin_date: data.checkin_date,
+                checkout_date: data.checkout_date,
+                adults_number: data.adults_number,
+                page_number
             }});
-            //Limpiamos buscador:
-            /*locationChange('');
-            checkinChange(date);
-            checkoutChange(date);
-            adults_numberChange(2);*/
             dispatch({
             type: SEARCHLISTHOTELS,
             payload: response.data.data
