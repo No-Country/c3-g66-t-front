@@ -3,7 +3,7 @@
 function HotelCard( {title, city, country, mainImg, key, price} ) {
     return (
    
-        <div className="group bg-withe-700 flex flex-wrap sm:flex-inherit rounded-lg shadow-xl relative overflow-hidden mb-8 flex-row transform hover:scale-125 transition-all">
+        <div className="group bg-withe-700 flex flex-wrap sm:flex-inherit rounded-lg shadow-xl relative overflow-hidden mb-8 flex-row md:transform hover:scale-125 transition-all">
             <a className="contents" href="http://">
                 <img className="relative w-full sm:max-w-xs sm:max-h-full max-h-48 object-cover" src={mainImg} alt="Img-hoteles" />
             </a>
@@ -16,7 +16,7 @@ function HotelCard( {title, city, country, mainImg, key, price} ) {
                     
                 </div>
                 
-                <ul className="flex flex-row flex-wrap justify-center mt-8">
+                <ul className="flex flex-wrap justify-center mt-8">
                     <li className="inline-block px-4 py-1 bg-green-400 mr-2 cursor-default mb-1 rounded-lg">${price}</li>
                     <a className="inline-block px-1 py-1 text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0" href="">Ver detalles</a>
                 </ul>
