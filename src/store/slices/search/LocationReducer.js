@@ -1,4 +1,4 @@
-import { searchLocation } from '../../../config/axios/axios';
+import { searchLocation } from "../../../config/axios/axios";
 
 //valores por defecto:
 const defaultLocation = {
@@ -11,31 +11,33 @@ const defaultLocation = {
         checkin_date: 2022/31/12,
         checkout_date: 2022/31/12,
         adults_number: 1,
-    },
-    errorGetLocation: false
+    }, 
+    errorGetLocation: false,
 };
 
 //tipos de acción:
-const SEARCHLOCATION = 'SEARCHLOCATION';
-const ERROR = 'ERROR';
+const SEARCHLOCATION = "SEARCHLOCATION";
+const ERROR = "ERROR";
 
 //reducers:
-export default function SearchLocationReducer(state = defaultLocation, { type, payload}) {
-    switch(type){
-        case SEARCHLOCATION: return {...state, data: payload, errorGetLocation: false };
-        case ERROR: return {...state, errorGetLocation: true};
-        default: return state;
-    };
-};
+export default function SearchLocationReducer(
+  state = defaultLocation,
+  { type, payload }
+) {
+  switch (type) {
+    case SEARCHLOCATION:
+      return { ...state, data: payload, errorGetLocation: false };
+    case ERROR:
+      return { ...state, errorGetLocation: true };
+    default:
+      return state;
+  }
+}
 
 //acciones:
-export const GetLocationAction = ({ 
-    location,
-    checkin_date,
-    checkout_date,
-    adults_number,
-    navigate}) => async (dispatch) => {
-
+export const GetLocationAction =
+  ({ location, checkin_date, checkout_date, adults_number, navigate }) =>
+  async (dispatch) => {
     try {
         if(location !== ''){
             const response = await searchLocation.get(`/location/${location}`);
@@ -59,9 +61,9 @@ export const GetLocationAction = ({
             alert('Ingrese un destino');
         };
         
-    } catch( errorGetLocation ) {
-        dispatch({
-            type: ERROR,
-        });
-    };
-};
+    } catch (errorGetLocation) {
+      dispatch({
+        type: ERROR,
+      });
+    }
+  };
