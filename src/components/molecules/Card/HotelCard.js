@@ -8,9 +8,9 @@ function HotelCard( {title, city, country, mainImg, key, price} ) {
                 <img className="relative w-full sm:max-w-xs sm:max-h-full max-h-48 object-cover" src={mainImg} alt="Img-hoteles" />
             </a>
             <div className="relative flex flex-col p-4">
-                <h1 className="text-3xl mb-2 text-black">{title}</h1>
+                <h1 className="text-lg mb-2 text-black">{title}</h1>
                 <div className="small mb-2">
-                    <p className="text-slate-400">{city}</p>
+                    <p className="text-slate-400">{city}, {country}</p>
                 </div>
                 <div className="w-0 group-hover:w-48 h-1 rounded bg-green-400 duration-150">
                     
@@ -18,7 +18,6 @@ function HotelCard( {title, city, country, mainImg, key, price} ) {
                 
                 <ul className="flex flex-row flex-wrap justify-center mt-8">
                     <li className="inline-block px-4 py-1 bg-green-400 mr-2 cursor-default mb-1 rounded-lg">${price}</li>
-                    <li className="inline-block px-4 py-1 bg-green-400 mr-2 cursor-default mb-1 rounded-lg">{country}</li>
                     <a className="inline-block px-1 py-1 text-indigo-300 inline-flex items-center md:mb-2 lg:mb-0" href="">Ver detalles</a>
                 </ul>
             </div>
