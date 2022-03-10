@@ -1,9 +1,3 @@
-.mainSection{
-    height: 800px;
-    display: flex;
-    flex-direction: row;
-}
-
 .swiper {
   width: 100%;
   height: 100%;

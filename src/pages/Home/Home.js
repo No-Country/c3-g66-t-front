@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <div>
-              <Section />
+              <Section classname="bg-hero-image w-full h-screen bg-cover bg-center flex flex-col items-center justify-center px-4 gap-8" />
             </div>
             <Footer/>
         </div>

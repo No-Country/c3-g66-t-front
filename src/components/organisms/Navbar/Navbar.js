@@ -18,13 +18,13 @@ const Navbar = () => {
     }
     return (
         <>
-        <div className="fixed z-10 w-full text-white flex justify-between px-4  items-center bg-black/20">
+        <div className="fixed z-20 w-full text-white flex justify-between px-4  items-center bg-black/20">
             <div className="text-2xl font-bolod text-center">
                 <Link to="/"><span className="block text-4xl hover:text-amber-300">Hotely</span></Link>
             </div>           
 
             <nav>
-                <div className="absolute right-6 md:hidden top-3 scale-150">
+                <div className="absolute right-6 md:hidden top-2 scale-150">
                     <MenuOutlined onClick={showMenu} className="scale-150 courser-pointer"/>
                 </div>                   
 

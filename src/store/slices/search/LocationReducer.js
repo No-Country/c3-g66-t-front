@@ -3,6 +3,7 @@ import { searchLocation } from '../../../config/axios/axios';
 //valores por defecto:
 const defaultLocation = {
     data:{
+        destiny: '',
         locations:{
             longitude: 0,
             latitude: 0
@@ -44,6 +45,7 @@ export const GetLocationAction = ({
             dispatch({
                 type: SEARCHLOCATION,
                 payload: {
+                    destiny: location,
                     locations:{
                         longitude: longitude,
                         latitude: latitude 
