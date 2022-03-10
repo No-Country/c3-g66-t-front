@@ -1,6 +1,7 @@
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { ImFacebook, ImTwitter } from 'react-icons/im'
 import { FaYoutube } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -9,7 +10,7 @@ const Footer = () => {
             <div className="w-10/12 m-auto flex flex-wrap justify-left gap-x-20 gap-y-5">
                 <div className="p-5">
                     <div className="text-xs uppercase text-gray-400 font-medium mb-6">Empresa</div>
-                    <a href="/" className='my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700'>Sobre Nosotros</a>
+                    <Link to="/aboutus" className='my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700'>Sobre Nosotros</Link>
                     <a href="/" className='my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700'>Contacto</a>
                     <a href="/" className="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">Desarrolladores</a>
                 </div>
