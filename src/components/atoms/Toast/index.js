@@ -12,11 +12,11 @@ export const Toast = ({ errors }) => {
       setMessage(formatter.format(errors))
       setVisible(true)
       
-      setTimeout(() => {
+      const timeout =setTimeout(() => {
         setMessage('')
         setVisible(false)
       }, 3000);
-      return () => (clearTimeout())
+      return () => (clearTimeout(timeout))
     }
   }, [errors])
   return (
