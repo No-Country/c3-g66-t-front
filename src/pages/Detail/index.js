@@ -7,32 +7,35 @@ import { GiCheckeredDiamond } from "react-icons/gi";
 import { MdLocalHotel } from "react-icons/md";
 import Loader from "../../components/atoms/Loader";
 import { useEffect } from "react";
+import { getHotelInfo } from "../../store/slices/hotel";
 
 export default function Detail() {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { hotelId } = useParams();
   const { checkin_date, checkout_date } = useSelector(
     (state) => state.SearchLocationReducer.data
   );
-  let { hotelId } = useParams();
-
-  const { hotelsList } = useSelector((state) => state.SearchHotelListReducer);
-  const { data: response, loading } = useSelector((state) => state.hotel.hotel);
-  const { roomTypeNames, aboutUs, lugaresInteres, tagline } = response;
-
-  let {
-    thumbnailUrl: { srpDesktop },
-    name,
-    address,
-    starRating,
-    ratePlan: { price },
-  } = hotelsList.filter((e) => +e.hotel_id === +hotelId)[0];
-  const newImage = srpDesktop.split("&").slice(0, -3).join("&");
   useEffect(() => {
-    if (hotelsList.length === 0) {
-      navigate("/");
-    }
-  }, [navigate, hotelsList]);
+    dispatch(getHotelInfo({ hotelId, checkin_date, checkout_date }));
+  }, [checkin_date, checkout_date, dispatch, hotelId]);
 
+  const { data: response, loading } = useSelector((state) => state.hotel.hotel);
+  const {
+    roomTypeNames = [],
+    aboutUs = [],
+    lugaresInteres = [],
+    tagline,
+    image,
+    name,
+    countryName,
+    provinceName,
+    addressLine1,
+    starRating,
+    price,
+  } = response;
+  if (loading) {
+    return <Loader />;
+  }
   return loading ? (
     <Loader />
   ) : (
@@ -44,13 +47,11 @@ export default function Detail() {
       <div className="flex w-5/6 gap-12">
         <div className="w-2/3 p-5">
           <div>
-            <img className="w-full rounded-2xl" src={`${newImage}`} alt="" />
-            <p className="text-xl font-bold mt-4 mb-4">
-              {tagline[0].slice(3, -4)}
-            </p>
+            <img className="w-full rounded-2xl " src={`${image}`} alt="" />
+            <p className="text-xl font-bold mt-4 mb-4">{tagline}</p>
             <p className="mb-2">
               <span>
-                {address.countryName}-{address.locality}-{address.streetAddress}
+                {countryName} - {provinceName} - {addressLine1}
               </span>
             </p>
           </div>
@@ -98,7 +99,7 @@ export default function Detail() {
         <div className="w-1/3">
           <div className=" shadow-xl mt-5 p-5 h-fit bg-white rounded-md ">
             <div className="flex justify-between p-2">
-              <p className="font-bold">$ {price.current} / noche </p>
+              <p className="font-bold">$ {price} / noche </p>
               <span>{starRating} ⭐</span>
             </div>
             <div className="flex">

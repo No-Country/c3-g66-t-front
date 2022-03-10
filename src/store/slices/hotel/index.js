@@ -5,7 +5,7 @@ export const hotelSlice = createSlice({
   name: "hotel",
   initialState: {
     hotel: {
-      data: {},
+      data: [],
       loading: false,
       error: "",
     },
@@ -31,9 +31,8 @@ export const getHotelInfo = (data) => {
       dispatch(setHotelDetail(hotelData));
     } catch (error) {
       dispatch(setError(JSON.stringify(error)));
-    } finally {
-      dispatch(setLoading(false));
     }
+    dispatch(setLoading(false));
   };
 };
 
