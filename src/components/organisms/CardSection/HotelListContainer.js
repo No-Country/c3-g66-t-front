@@ -18,16 +18,15 @@ const HotelListContainer = () => {
 
     useEffect(() => {
         setHotels(list.hotelsList);
-        console.log(list.hotelsList);
     }, [list]);
 
 
    return(
        <>
          
-            
+        <div className="p-20">
             <HotelList hotels={hotels} />
-         
+        </div>   
        </>
    );
 }

@@ -1,10 +1,10 @@
 //configuración axios
 import axios from "axios";
 
-//token de usuario mapbox creado por ailén:
-const mapBoxToken = 'pk.eyJ1Ijoibm9jb3VudHJ5LTY2IiwiYSI6ImNrenJjZ3RqZjZyc20ydm5mZG4wd3U3bmEifQ.S1LiIZ3AboqkYOVYiSeJNg';
+//token de usuario ailén mapbox:
+const mapBoxToken = process.env.REACT_APP_MAPBOX_TOKEN;
 //URL del back:
-const baseURL = 'https://nc-hotely.herokuapp.com/api/v1';
+const baseURL = process.env.REACT_APP_BASE_URL;
 
 //para el autocompletado del buscador:
 const searchApiMapBox = axios.create({
@@ -15,7 +15,7 @@ const searchApiMapBox = axios.create({
         access_token: mapBoxToken,
         autocomplete: true,
         country: ['AR', 'UY', 'BR', 'CO', 'US', 'PE'], //acá se hace filtro de países según código ISO 3166-1 alpha-2
-        types: ['country', 'region', 'locality', 'district', 'neighborhood']
+        types: ['country', 'region', 'locality', 'neighborhood']
     }
 });
 
@@ -31,7 +31,6 @@ const getList = axios.create({
         page_number: 1,
         currency: 'ARS',
         locale: 'es_ES',
-        sort_order: 'STAR_RATING_HIGHEST_FIRST'  
     }
 });
 
