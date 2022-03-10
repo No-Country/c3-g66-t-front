@@ -12,7 +12,7 @@ function HotelCard({ title, city, country, mainImg, id: hotelId, price }) {
     navigate(`/hotels/${hotelId}`);
   };
   return (
-    <div className="group h-80 bg-withe-700 flex flex-wrap rounded-lg shadow-xl relative overflow-hidden  flex-row transform hover:scale-125 transition-all">
+    <div className="group h-64 bg-withe-700 flex flex-wrap rounded-lg shadow-xl relative overflow-hidden  flex-row transform hover:scale-125 transition-all">
     <a className="contents" href="http://">
         <img className="relative w-full sm:max-w-xs sm:max-h-full max-h-48 object-cover" src={mainImg} alt="Img-hoteles" />
     </a>
