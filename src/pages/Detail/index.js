@@ -9,6 +9,8 @@ import Loader from "../../components/atoms/Loader";
 import { useEffect, useState } from "react";
 import { getHotelInfo } from "../../store/slices/hotel";
 import { createReview, getReviews } from "../../services/review";
+// import CheckoutForm from "../../components/molecules/BuyForm/CheckoutForm";
+
 export default function Detail() {
   const [reviews, setReviews] = useState([]);
   const [opinion, setOpinion] = useState("");
@@ -162,7 +164,7 @@ export default function Detail() {
                 </select>
               </div>
             </div>
-            <button className="button min-w-full mt-2">Reservar</button>
+            {/* <CheckoutForm /> */}
             <p className="text-center p-3 font-bold">Detalle de pago</p>
             <div className="flex justify-between p-1">
               <p>Cleaning fee</p>
