@@ -124,7 +124,7 @@ export default function Detail() {
           <hr />
         </div>
         <div className="w-full p-3 md:w-1/3 md:p-0">
-          <div className=" shadow-xl mt-5 p-5 h-fit bg-white rounded-md ">
+          <div className=" shadow-xl mt-5 p-5 h-fit bg-slate-50 rounded-md ">
             <div className="flex justify-between p-2">
               <p className="font-bold">$ {price} / noche </p>
               <span>{starRating} ⭐</span>

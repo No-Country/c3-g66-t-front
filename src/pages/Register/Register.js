@@ -65,21 +65,21 @@ const Register = () => {
             }}
             >
                 <div className="bg-no-repeat bg-cover bg-[url('https://i0.wp.com/foodandpleasure.com/wp-content/uploads/2018/04/akalki-0.jpg?fit=1920%2C820&ssl=1')] w-full min-h-screen flex opacity-100">
-                    <div className="bg-white grid content-center justify-center lg:w-1/3 md:w-1/2 w-full md:m-auto lg:mx-10 rounded-lg shadow-2xl p-3">
+                    <div className="bg-slate-50 grid content-center justify-center lg:w-1/3 md:w-1/2 w-full md:m-auto lg:mx-10 rounded-lg shadow-2xl p-3">
                         <img src="https://res.cloudinary.com/dhlbsrd5k/image/upload/v1644619719/WhatsApp_Image_2022-02-11_at_5.39.23_PM_bcrws4.jpg" className="w-1/2 m-auto"  alt="logo"/>
                         {errors && <ToastPortal errors={errors}/>}
                         <Form className="m-5">
                             <div className="md:flex gap-3">
                                 <div className="mb-3 w-full md:w-1/2">
                                     <span className="block text-sm font-medium text-slate-700">Nombre(s)</span>
-                                    <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                    <Field type="text" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                         focus:outline-none focus:border-sky-500 focus:ring-1"  placeholder="Ingrese su nombre" name="firstname"                                         
                                     />
                                     <ErrorMessage className="errorMessage" name="firstname" component="div" />
                                 </div>
                                 <div className="mb-3 w-full md:w-1/2">
                                     <span className="block text-sm font-medium text-slate-700">Apellidos</span>
-                                    <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                    <Field type="text" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                         focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su apellido" name="lastname"                                         
                                     />
                                     <ErrorMessage className="errorMessage" name="lastname" component="div" />
@@ -91,7 +91,7 @@ const Register = () => {
                                     <div className='flex gap-3 md:flex-col'>
                                         <div className="mb-3 w-1/2 md:w-full">
                                             <span className="block text-sm font-medium text-slate-700">DNI</span>
-                                            <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                            <Field type="text" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                                 focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su identificaci&oacute;n"
                                                  name="dni" 
                                             />
@@ -99,7 +99,7 @@ const Register = () => {
                                         </div>
                                         <div className="mb-3 w-1/2 md:w-full">
                                             <span className="block text-sm font-medium text-slate-700">Telefono</span>
-                                            <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                            <Field type="text" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                                 focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su n&uacute;mero de celular"
                                                  name="phone" 
                                             />
@@ -108,7 +108,7 @@ const Register = () => {
                                     </div>
                                     <div className="mb-3 w-full ">
                                         <span className="block text-sm font-medium text-slate-700">Foto</span>
-                                        <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                        <Field type="text" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                             focus:outline-none focus:border-sky-500 focus:ring-1" name="img"                                             
                                         />
                                         <ErrorMessage className="errorMessage" name="img" component="div" />
@@ -117,7 +117,7 @@ const Register = () => {
                                 {/* https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGcBqHI_nx1QkcHOgUPs5JaIhH0Epi476MTBWRVmimQhILgWpie070xtty5wovR6X9QXU&usqp=CAU */}
                                 {/* https://img2.freepng.es/20180717/cz/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214.7783760115318026250566.jpg */}
                                 <div className="w-44 h-44 ml-5 bg-slate-400 rounded-full bg-[url('https://img2.freepng.es/20180717/cz/kisspng-avatar-youtube-person-kahoot-a-roommate-who-plays-with-a-cell-phone-5b4d74010dd214.7783760115318026250566.jpg')] bg-cover bg-no-repeat self-center  -scale-x-100" >
-                                    <button className="bg-white h-8 w-8 -mt-8 rounded-full hover:animate-spin" >
+                                    <button className="bg-slate-50 h-8 w-8 -mt-8 rounded-full hover:animate-spin" >
                                         <FiRefreshCcw size={24} />
                                     </button>
                                 </div>
@@ -125,7 +125,7 @@ const Register = () => {
                             <div className="md:flex gap-3 mt-2">
                                 <div className="mb-3 w-full md:w-1/2">
                                     <span className="block text-sm font-medium text-slate-700">Email</span>
-                                    <Field type="text" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                    <Field type="text" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                         focus:outline-none focus:border-sky-500 focus:ring-1" placeholder="Ingrese su correo electr&oacute;nico"
                                          name="email" 
                                     />
@@ -133,7 +133,7 @@ const Register = () => {
                                 </div>
                                 <div className="mb-3 w-full md:w-1/2">
                                     <span className="block text-sm font-medium text-slate-700">Contraseña</span>
-                                    <Field type="password" className="mt-1 block w-full px-3 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
+                                    <Field type="password" className="mt-1 block w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400
                                         focus:outline-none focus:border-sky-500 focus:ring-1 " placeholder="Ingrese su contraseña"
                                          name="password" 
                                     />
