@@ -30,7 +30,7 @@
 }
 
 .suggestionWrapper{
-    @apply bg-white p-2 mt-72 absolute 
+    @apply bg-white mt-72 absolute 
     w-2/3 h-36 mb-28
     sm:w-9/12 sm:h-40 sm:mb-24 sm:rounded-md
     md:w-3/4 md:h-44 md:mb-20 
@@ -39,7 +39,7 @@
     2xl:w-96;
 }
 .suggestions{
-    @apply cursor-pointer hover:bg-details text-sm
+    @apply cursor-pointer hover:bg-details text-sm p-0.5 px-1 ease-in-out duration-100
     md:text-sm
     xl:text-base
 }
