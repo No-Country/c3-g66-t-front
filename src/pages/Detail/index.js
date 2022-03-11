@@ -84,12 +84,14 @@ export default function Detail() {
           </div>
           <hr />
           <div className="mt-3 mb-3">
-            {roomTypeNames.map((kind, index) => (
-              <div key={index} className="flex  mb-1">
-                <MdLocalHotel className="mr-3" />
-                <p>{kind}</p>
-              </div>
-            ))}
+            {roomTypeNames
+              .filter(e => e !== "")
+              .map(kind => (
+                <div key={kind} className="flex  mb-1">
+                  <MdLocalHotel className="mr-3" />
+                  <p>{kind}</p>
+                </div>
+              ))}
           </div>
           <hr />
 
