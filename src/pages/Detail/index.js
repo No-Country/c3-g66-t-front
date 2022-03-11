@@ -8,6 +8,7 @@ import { MdLocalHotel } from "react-icons/md";
 import Loader from "../../components/atoms/Loader";
 import { useEffect } from "react";
 import { getHotelInfo } from "../../store/slices/hotel";
+import CheckoutForm from "../../components/molecules/BuyForm/CheckoutForm";
 
 export default function Detail() {
   const dispatch = useDispatch();
@@ -137,7 +138,7 @@ export default function Detail() {
                 </select>
               </div>
             </div>
-            <button className="button min-w-full mt-2">Reservar</button>
+            <CheckoutForm />
             <p className="text-center p-3 font-bold">Detalle de pago</p>
             <div className="flex justify-between p-1">
               <p>Cleaning fee</p>
