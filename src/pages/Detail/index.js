@@ -9,7 +9,7 @@ import Loader from "../../components/atoms/Loader";
 import { useEffect, useState } from "react";
 import { getHotelInfo } from "../../store/slices/hotel";
 import { createReview, getReviews } from "../../services/review";
-// import CheckoutForm from "../../components/molecules/BuyForm/CheckoutForm";
+import PaymentElement from "../../components/organisms/PaymentElement";
 
 export default function Detail() {
   const [reviews, setReviews] = useState([]);
@@ -17,17 +17,17 @@ export default function Detail() {
   const dispatch = useDispatch();
   const { hotelId } = useParams();
   const { checkin_date, checkout_date } = useSelector(
-    (state) => state.SearchLocationReducer.data
+    state => state.SearchLocationReducer.data
   );
   useEffect(() => {
     dispatch(getHotelInfo({ hotelId, checkin_date, checkout_date }));
   }, [checkin_date, checkout_date, dispatch, hotelId]);
 
   useEffect(() => {
-    getReviews(hotelId).then((review) => setReviews(review));
+    getReviews(hotelId).then(review => setReviews(review));
   }, [hotelId]);
 
-  const { data: response, loading } = useSelector((state) => state.hotel.hotel);
+  const { data: response, loading } = useSelector(state => state.hotel.hotel);
   let {
     roomTypeNames = [],
     aboutUs = [],
@@ -44,10 +44,10 @@ export default function Detail() {
 
   const {
     user: { logged },
-  } = useSelector((state) => state.user);
+  } = useSelector(state => state.user);
 
   image = image + "?impolicy=fcrop&w=900&h=450&q=high";
-  const sendReview = async (e) => {
+  const sendReview = async e => {
     e.preventDefault();
     if (!logged) {
       alert("registrese para opinar");
@@ -164,7 +164,13 @@ export default function Detail() {
                 </select>
               </div>
             </div>
-            {/* <CheckoutForm /> */}
+            <PaymentElement
+              hotel_id={hotelId}
+              checkin_date={checkin_date}
+              checkout_date={checkout_date}
+              amount={price}
+              logged={logged}
+            />
             <p className="text-center p-3 font-bold">Detalle de pago</p>
             <div className="flex justify-between p-1">
               <p>Cleaning fee</p>
@@ -203,7 +209,7 @@ export default function Detail() {
                   cols="15"
                   name="opinion"
                   value={opinion}
-                  onChange={(e) => setOpinion(e.target.value)}
+                  onChange={e => setOpinion(e.target.value)}
                 />
                 <button className="button m-2 self-end" onClick={sendReview}>
                   Enviar
@@ -211,7 +217,7 @@ export default function Detail() {
               </div>
             </div>
             {/* componente review */}
-            {reviews.map((user) => {
+            {reviews.map(user => {
               let formatDate = new Date(user.createdAt);
               let fecha = formatDate
                 .toString()
