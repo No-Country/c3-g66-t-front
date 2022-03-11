@@ -24,7 +24,8 @@ export const GetHotelsFilteredAction = ({
     guest_rating_min,
     star_rating_ids,
     price_min,
-    price_max   }) => async (dispatch) => {
+    price_max,
+    page_number  }) => async (dispatch) => {
 
     try {
         if (data.locations.latitude !== 0 && data.locations.longitude !== 0){
@@ -41,7 +42,8 @@ export const GetHotelsFilteredAction = ({
                 guest_rating_min,
                 star_rating_ids,
                 price_min,
-                price_max
+                price_max,
+                page_number
             }});
             dispatch({
             type: HOTELSFILTERED,
