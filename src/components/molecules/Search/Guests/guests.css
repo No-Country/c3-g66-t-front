@@ -1,45 +1,39 @@
-.container-guests{
-    @apply
-    col-span-2
+.container-guests {
+  @apply col-span-2
     flex flex-row justify-around items-center
-    border border-details border-opacity-60
+    border border-details
     rounded-xl
     h-4/6 w-full
     md:col-span-1 md:justify-around
     lg:rounded-l-none lg:mt-4;
 }
-.container-title-guests{
-    @apply
-    flex flex-col justify-center items-center
+.container-title-guests {
+  @apply flex flex-col justify-center items-center
     h-full w-8/12;
 }
-.title-guests{
-    @apply
-    text-details font-medium text-opacity-60 mt-3
+.title-guests {
+  @apply text-details font-medium mt-3
     text-xs
     sm:mt-3
     md:text-xs md:mt-3
     lg:text-sm;
 }
-.container-amount-guests{
-    @apply
-    flex justify-center items-center gap-4 mb-2
+.container-amount-guests {
+  @apply flex justify-center items-center gap-4 mb-2
     lg:mb-1
     xl:mb-2;
 }
-.amount{
-    @apply
-    text-white text-xs
+.amount {
+  @apply text-white text-xs
     flex items-center justify-center w-8
-    xl:text-sm; ;
+    xl:text-sm;
 }
-.add-guests{
-    @apply
-    text-details text-xl
+.add-guests {
+  @apply text-details text-xl
     flex justify-center items-center
     hover:text-search
     xl:text-2xl;
 }
-.iconPerson{
-    @apply text-details text-3xl text-opacity-60; 
+.iconPerson {
+  @apply text-details text-3xl;
 }
