@@ -3,12 +3,15 @@ import { searchLocation } from "../../../config/axios/axios";
 //valores por defecto:
 const defaultLocation = {
   data: {
+    destiny: "",
     locations: {
       longitude: 0,
       latitude: 0,
     },
-    checkin_date: "2022-03-10",
-    checkout_date: "2022-03-10",
+    checkin_date:
+      localStorage.getItem("checkin_date")?.toString() || "2022-03-11",
+    checkout_date:
+      localStorage.getItem("checkout_date")?.toString() || "2022-03-11",
     adults_number: 1,
   },
   errorGetLocation: false,
@@ -46,6 +49,7 @@ export const GetLocationAction =
         dispatch({
           type: SEARCHLOCATION,
           payload: {
+            destiny: location,
             locations: {
               longitude: longitude,
               latitude: latitude,

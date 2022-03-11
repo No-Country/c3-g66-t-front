@@ -15,7 +15,7 @@ const searchApiMapBox = axios.create({
         access_token: mapBoxToken,
         autocomplete: true,
         country: ['AR', 'UY', 'BR', 'CO', 'US', 'PE'], //acá se hace filtro de países según código ISO 3166-1 alpha-2
-        types: ['country', 'region', 'locality', 'neighborhood']
+        types: ['country', 'place', 'region', 'locality', 'neighborhood']
     }
 });
 

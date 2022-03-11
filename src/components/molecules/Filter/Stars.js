@@ -49,7 +49,7 @@ const Stars = ( { stars, onChangeStarsChecked} ) => {
     };
 
     return (
-        <div className='pl-5 h-32 w-64 gap-2 flex flex-col items-start justify-center bg-gray-100'>
+        <div className='pl-5 h-32 w-64 gap-2 flex flex-col items-start justify-center bg-gray-100 border-r border-gray-200'>
             <div className='flex flex-row items-center gap-2' onClick={handleChecked1}>
                 <input type='checkbox' className='cursor-pointer' onChange={handleChecked1} checked={(stars.fiveStarsChecked !== 0)}/>
                 <div className='flex flex-row items-center gap-1 cursor-pointer'>
