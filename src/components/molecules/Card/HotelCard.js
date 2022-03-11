@@ -12,9 +12,9 @@ function HotelCard({ title, city, country, mainImg, id: hotelId, price }) {
   // };
   return (
     <div className="group h-full bg-slate-50 flex flex-wrap rounded-lg shadow-xl relative overflow-hidden  flex-row transform hover:scale-125 transition-all">
-    <a className="contents" href="http://">
+    <Link className="contents" to={`/hotels/${hotelId}`}>
         <img className="relative w-full sm:max-w-xs sm:max-h-full max-h-48 object-cover" src={mainImg} alt="Img-hoteles" />
-    </a>
+    </Link>
     <div className="relative flex flex-col p-4 justify-items-center w-full h-full">
         <h1 className="text-lg mb-2 m-1 text-black">{title}</h1>
         <div className="small mb-2">
