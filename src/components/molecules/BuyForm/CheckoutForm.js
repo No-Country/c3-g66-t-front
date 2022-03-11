@@ -1,10 +1,8 @@
-import {PaymentElement, useElements, Elements, useStripe} from '@stripe/react-stripe-js';
-import {loadStripe} from '@stripe/stripe-js';
+import {PaymentElement, useElements, useStripe} from '@stripe/react-stripe-js';
 
 
-const stripePromise = loadStripe('pk_test_51KalcSBGm1w1OkqgMrJr3o8GJtmwxSljglxv5sxMGibqbkdQxS1r9ege3WQmV2eEQBHNHvqKhwuaXuJSJWqympbh00tRk2bam9');
 
-function Formulario (){
+function CheckoutForm (){
   const stripe = useStripe();
   const elements = useElements();
   const handleSubmit = async (event) => {
@@ -25,17 +23,4 @@ function Formulario (){
   );
 }
 
-function App() {
-    const options = {
-        // passing the client secret obtained from the server
-        clientSecret: 'pi_3Kc0ODBGm1w1Okqg1N8vd8Aj_secret_VZDpNRCxKu9eXJd9AfCqXxXhH',
-    };
-
-    return (
-        <Elements stripe={stripePromise} options={options}>
-           <Formulario />
-        </Elements>
-    );
-};
-
-export default App;
+export default CheckoutForm;
