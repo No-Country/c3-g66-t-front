@@ -12,8 +12,8 @@ const Button = ( {categories, accomodation, amenities, price, minPrice, maxPrice
     };
 
     return (
-        <button onClick={onFilter} className='text-xs font-semibold w-24 h-8 text-gray-900 bg-white border-gray-400 rounded-lg cursor-pointer
-        hover:bg-gray-200 border hover:border-gray-300 hover:text-gray-800 duration-700'>
+        <button onClick={onFilter} className='text-xs font-semibold w-24 h-8 text-gray-900 border-gray-400 rounded-lg cursor-pointer
+        hover:bg-gray-200 border hover:border-gray-300 hover:text-gray-800 duration-700 bg-white'>
         Filtrar
         </button>
     )

@@ -5,13 +5,19 @@
     @apply bg-gray-100 w-64 absolute z-10 border-none border-r sm:border-b sm:border-gray-200;
 }
 .container-main-title-icon{
-    @apply flex flex-row items-center gap-1 pl-5 py-2 w-64 h-10 sm:border-b sm:border-gray-200 bg-white text-stone-900;
+    @apply flex flex-row items-center gap-1 pl-5 py-2 w-64 h-10 sm:border-b sm:border-gray-200 text-stone-900;
+}
+.container-main-title-icon{
+    background-color: white;
 }
 .filter-title{
     @apply text-sm cursor-pointer text-gray-600 hover:text-stone-900 ease-in-out duration-500;
 }
 .container-filters-titles{
-    @apply flex flex-col items-start hover:bg-white border-r border-gray-200;
+    @apply flex flex-col items-start border-r border-gray-200;
+}
+.container-filters-titles:hover{
+    background-color: white;
 }
 .containter-icons-titles{
     @apply flex flex-row items-center gap-1 pl-5 py-2;
