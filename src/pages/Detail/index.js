@@ -6,10 +6,12 @@ import { BsFillCheckSquareFill } from "react-icons/bs";
 import { GiCheckeredDiamond } from "react-icons/gi";
 import { MdLocalHotel } from "react-icons/md";
 import Loader from "../../components/atoms/Loader";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { getHotelInfo } from "../../store/slices/hotel";
-
+import { createReview, getReviews } from "../../services/review";
 export default function Detail() {
+  const [reviews, setReviews] = useState([]);
+  const [opinion, setOpinion] = useState("");
   const dispatch = useDispatch();
   const { hotelId } = useParams();
   const { checkin_date, checkout_date } = useSelector(
@@ -18,6 +20,10 @@ export default function Detail() {
   useEffect(() => {
     dispatch(getHotelInfo({ hotelId, checkin_date, checkout_date }));
   }, [checkin_date, checkout_date, dispatch, hotelId]);
+
+  useEffect(() => {
+    getReviews(hotelId).then((review) => setReviews(review));
+  }, [hotelId]);
 
   const { data: response, loading } = useSelector((state) => state.hotel.hotel);
   let {
@@ -34,7 +40,26 @@ export default function Detail() {
     price,
   } = response;
 
+  const {
+    user: { logged },
+  } = useSelector((state) => state.user);
+
   image = image + "?impolicy=fcrop&w=900&h=450&q=high";
+  const sendReview = async (e) => {
+    e.preventDefault();
+    if (!logged) {
+      alert("registrese para opinar");
+    } else {
+      const body = {
+        title: "10/40",
+        summary: opinion,
+        rating: 6,
+      };
+      const post = await createReview(hotelId, body);
+      setReviews(reviews.concat(post.data.data));
+      setOpinion("");
+    }
+  };
 
   return loading ? (
     <Loader />
@@ -161,7 +186,8 @@ export default function Detail() {
             <div className="flex justify-between mt-3 mb-3">
               <p className="text-xl font-bold">Reviews</p>
               <p>
-                <span> 😀</span>1 reviews
+                <span> 😀</span>
+                {reviews.length} reviews
               </p>
             </div>
             <div className="flex flex-col mb-4">
@@ -169,32 +195,49 @@ export default function Detail() {
                 <p className="text-md font-bold mb-2">
                   Dejanos saber tu opinión
                 </p>
-                <textarea className="border-2" rows="6" cols="15" />
-                <button className="button m-2 self-end">Enviar</button>
+                <textarea
+                  className="border-2"
+                  rows="6"
+                  cols="15"
+                  name="opinion"
+                  value={opinion}
+                  onChange={(e) => setOpinion(e.target.value)}
+                />
+                <button className="button m-2 self-end" onClick={sendReview}>
+                  Enviar
+                </button>
               </div>
             </div>
             {/* componente review */}
-
-            <div className="flex flex-col mb-4">
-              <div className="flex justify-between">
-                <div className="flex mb-3">
-                  <img
-                    src="https://www.caras.com.mx/wp-content/uploads/2018/05/El-secreto-detr%C3%A1s-del-retrato-de-la-Mona-Lisa-1280x720.jpg"
-                    alt=""
-                    className="rounded-full w-16"
-                  />
-                  <div className="flex flex-col ml-3">
-                    <p className="text-xs">Brenda Nahomi</p>
-                    <span className="text-xs"> 16 de Abril </span>
+            {reviews.map((user) => {
+              let formatDate = new Date(user.createdAt);
+              let fecha = formatDate
+                .toString()
+                .split(" ")
+                .slice(1, 4)
+                .join(" ");
+              let rating = user.rating / 2;
+              return (
+                <div className="flex flex-col mb-4" key={user._id}>
+                  <div className="flex justify-between">
+                    <div className="flex mb-3">
+                      <img
+                        src={user.user.img}
+                        alt=""
+                        className="rounded-full w-16"
+                      />
+                      <div className="flex flex-col ml-3">
+                        <p className="text-xs">{user.user.firstname}</p>
+                        <span className="text-xs"> {fecha} </span>
+                      </div>
+                    </div>
+                    <p>{"⭐".repeat(rating)}</p>
                   </div>
+                  <p className="mb-3">{user.summary}</p>
+                  <hr />
                 </div>
-                <p>⭐⭐⭐⭐⭐</p>
-              </div>
-              <p className="mb-3">
-                Un muy buen hotel, lo recomiendo pues la atencion es super buena
-              </p>
-              <hr />
-            </div>
+              );
+            })}
           </div>
         </div>
       </div>
