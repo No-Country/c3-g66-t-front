@@ -560,6 +560,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .z-20{
   z-index: 20;
 }
+.m-10{
+  margin: 2.5rem;
+}
 .m-0{
   margin: 0px;
 }
@@ -908,9 +911,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(251 191 36 / var(--tw-border-opacity));
 }
-.bg-slate-300{
+.bg-slate-400{
   --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 .bg-gray-100{
   --tw-bg-opacity: 1;
@@ -923,10 +926,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-black{
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-.bg-slate-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 .bg-sky-700{
   --tw-bg-opacity: 1;
@@ -974,9 +973,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .object-cover{
   object-fit: cover;
 }
-.p-10{
-  padding: 2.5rem;
-}
 .p-5{
   padding: 1.25rem;
 }
@@ -994,10 +990,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-8{
   padding: 2rem;
-}
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 .py-20{
   padding-top: 5rem;
@@ -1018,6 +1010,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .px-4{
   padding-left: 1rem;
   padding-right: 1rem;
+}
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .px-1{
   padding-left: 0.25rem;
