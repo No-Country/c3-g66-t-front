@@ -31,7 +31,7 @@
     @apply
     text-white text-xs
     flex items-center justify-center w-8
-    xl:text-sm; ;
+    xl:text-sm;
 }
 .add-guests{
     @apply

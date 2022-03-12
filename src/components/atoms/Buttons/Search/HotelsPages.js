@@ -23,11 +23,10 @@ const HotelsPages = () => {
         }
     };
 
-    /*useEffect(() => {
-        setPage_number(1);
+    useEffect(() => {
         setPageFiltered(false);
-        console.log('useEffect 1');
-    }, [data.destiny]);*/
+        setPage_number(1);
+    }, [data]);
 
     useEffect(() => {
         if (dataFilter.categories) {
@@ -39,9 +38,9 @@ const HotelsPages = () => {
     //trae hoteles de la página que se indique
     useEffect( () => {
         if (!pageFiltered && !dataFilter.categories){
-           dispatch(GetListHotelsAction({ data, page_number }));
+           dispatch(GetListHotelsAction({ data, page_number })); 
         }
-    }, [page_number] );
+    }, [dispatch, page_number] );
 
     useEffect( () => {
         if (dataFilter.categories){
@@ -92,7 +91,7 @@ const HotelsPages = () => {
             const pointsFiltered = dataFilter.minPoint.toString();
             let guest_rating_min = '';
             (pointsFiltered !== '') ? guest_rating_min = pointsFiltered : guest_rating_min = null;
-            
+
             dispatch(GetHotelsFilteredAction({
                 data,
                 amenity_ids,
@@ -108,7 +107,7 @@ const HotelsPages = () => {
                 alert('No hay resultados de lo buscado');
             }
         }
-    }, [dataFilter] );
+    }, [dispatch, dataFilter, data,  page_number] );
 
     return (
         <div className='h-10 w-full flex flex-row bg-gray-100 justify-center items-start'>

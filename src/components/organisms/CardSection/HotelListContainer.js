@@ -20,7 +20,6 @@ const HotelListContainer = () => {
         setHotels(list.hotelsList);
     }, [list]);
 
-
    return(
        <>
          
