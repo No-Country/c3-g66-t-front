@@ -1,13 +1,12 @@
-# Hotel booking app: Hotely / Aplicación de reserva de hoteles: Hotely
+#  Aplicación de reserva de hoteles: Hotely / Hotel booking app: Hotely
 
-Esta es una aplicación para reservar hoteles de manera online.
+Esta es una aplicación para reservar hoteles de manera online / This is an application to book hotels online. 
 -------------------------------------------------------------------------------------------------------------------------------------
-This is an application to book hotels online. 
+
 
 ## Comenzando / Starting🚀
 
 Puedes ver la aplicación funcional ingresando al siguietne link: .................................
--------------------------------------------------------------------------------------------------------------------------------------
 You can see the aplication by entering the following link: link: ................................ 
 
 
@@ -19,6 +18,9 @@ Intalá nuestro proyecto con npm
 -----------------------------
 Install our project with npm/ 
 
+Install our project with npm
+
+
 ```bash
   npm install ..............
 ```
@@ -28,7 +30,7 @@ Install our project with npm/
 1- Ingresa al siguiente link: .............................
  
 2- En caso de tenerlo en tu ordenarod ejecuta el comando npm start en la terminal una vez que lo tengas abierto. Recuerda que deberás tener instaladas ciertas librerías (leer la sección: "Librerias instaladas").
--------------------------------------------------------------------------------------------------------------------------------------
+
 1- Enter the following link: ...............................
 
 2- Execute the command npm start in the terminal once you have the proyect opened. Remember that you must have certain libraries installed (read the section: "Installed Libraries").
