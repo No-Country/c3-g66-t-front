@@ -2,7 +2,7 @@
     @apply
     col-span-2
     flex flex-row justify-around items-center
-    border border-details border-opacity-60
+    border border-details
     rounded-xl
     h-4/6 w-full
     md:col-span-1 md:justify-around
@@ -15,7 +15,7 @@
 }
 .title-guests{
     @apply
-    text-details font-medium text-opacity-60 mt-3
+    text-details font-medium mt-3
     text-xs
     sm:mt-3
     md:text-xs md:mt-3
@@ -41,5 +41,5 @@
     xl:text-2xl;
 }
 .iconPerson{
-    @apply text-details text-3xl text-opacity-60; 
+    @apply text-details text-3xl; 
 }
