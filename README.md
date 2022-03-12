@@ -1,14 +1,13 @@
 # Hotel booking app: Hotely / Aplicación de reserva de hoteles: Hotely
 
-This is an application to book hotels online.
--------------------------------------------------------------------------------------------------------------------------------------
 Esta es una aplicación para reservar hoteles de manera online.
+-------------------------------------------------------------------------------------------------------------------------------------
+This is an application to book hotels online. 
 
 ## Comenzando / Starting🚀
 
 Puedes ver la aplicación funcional ingresando al siguietne link: .................................
 -------------------------------------------------------------------------------------------------------------------------------------
-
 You can see the aplication by entering the following link: link: ................................ 
 
 
@@ -16,9 +15,9 @@ You can see the aplication by entering the following link: link: ...............
 
 
 ### Instalación / Instalation 🔧
-Install our project with npm/
------------------------------
 Intalá nuestro proyecto con npm 
+-----------------------------
+Install our project with npm/ 
 
 ```bash
   npm install ..............
