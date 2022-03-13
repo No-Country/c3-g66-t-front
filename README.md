@@ -1,6 +1,48 @@
-#### Librerias instaladas:
+#  Aplicación de reserva de hoteles: Hotely / Hotel booking app: Hotely
+
+Esta es una aplicación para reservar hoteles de manera online / This is an application to book hotels online. 
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Comenzando / Starting🚀
+
+Puedes ver la aplicación funcional ingresando al siguietne link: .................................
+You can see the aplication by entering the following link: link: ................................ 
+
+
+
+
+
+### Instalación / Instalation 🔧
+Intalá nuestro proyecto con npm 
+-----------------------------
+Install our project with npm/ 
+
+Install our project with npm
+
+
+```bash
+  npm install ..............
+```
+
+## Despliegue/ Deployment 📦
+
+1- Ingresa al siguiente link: .............................
+ 
+2- En caso de tenerlo en tu ordenador ejecuta el comando npm start en la terminal una vez que lo tengas abierto. Recuerda que deberás tener instaladas ciertas librerías (leer la sección: "Librerias instaladas").
+
+1- Enter the following link: ...............................
+
+2- Execute the command npm start in the terminal once you have the proyect opened. Remember that you must have certain libraries installed (read the section: "Installed Libraries").
+ 
+
+#### Librerias instaladas/ Installed libraries: 🛠️
 * react-router-dom version 6.2.1
 * axios version 0.25.0
+* react-redux version 7.2.6
+* redux-thunk version 2.4.1
+* @reduxjs/toolkit version 1.7.2
+* @redux-devtools/extension version 3.2.2
 * tailwindcss version 3.0.22
 * autoprefixer version 10.4.2
 * postcss-cli version 9.1.0
@@ -10,3 +52,26 @@
 * @material-ui/lab version 4.0.0-alpha.60
 * @reduxjs/toolkit version 1.7.2
 * swiper version 8.0.6
+* @stripe/react-stripe-js version 1.7.0
+* @stripe/stripe-js version 1.24.0
+* formik version 2.2.9
+* sweetalert2 version 11.4.4
+
+
+## Autores / Authors ✒️
+
+* **Ailen Olha** - *front-end* - [Github](https://github.com/ailenolha) [Linkedin](https://linkedin.com/in/ailenolha)
+* **Lisandro Perrotta** - *front-end* - [LisandroPer](https://github.com/LisandroPer)
+* **Braian Delgado** - *back-end* - []()
+* **Ignacio Lisandro Martín** - *back-end* - []()
+* **Brenda Nahomi Quispe Gonzales** - *full-stack* - []()
+
+* **César Carabetta** - *team-leader* - []()
+
+
+## Agradecimientos 🎁
+
+
+* Agradecimientos a: No Country for Junior Devs 🤓.
+
+
