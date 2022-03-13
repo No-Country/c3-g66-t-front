@@ -43,6 +43,9 @@ export const GetListHotelsAction =
         });
         window.localStorage.setItem("checkin_date", data.checkin_date);
         window.localStorage.setItem("checkout_date", data.checkout_date);
+        window.localStorage.setItem("destiny", data.destiny);
+        window.localStorage.setItem("longitude", data.locations.longitude);
+        window.localStorage.setItem("latitude", data.locations.latitude);
       }
     } catch (errorGetHotels) {
       dispatch({
