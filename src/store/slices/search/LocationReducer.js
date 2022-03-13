@@ -3,10 +3,11 @@ import { searchLocation } from "../../../config/axios/axios";
 //valores por defecto:
 const defaultLocation = {
   data: {
-    destiny: "",
+    destiny:
+    localStorage.getItem("destiny")?.toString() || "Buenos Aires",
     locations: {
-      longitude: 0,
-      latitude: 0,
+      longitude: localStorage.getItem("longitude")?.toString() || "0",
+      latitude: localStorage.getItem("latitude")?.toString() || "0"
     },
     checkin_date:
       localStorage.getItem("checkin_date")?.toString() || "2022-03-11",
