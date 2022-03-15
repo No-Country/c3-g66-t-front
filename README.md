@@ -6,8 +6,8 @@ Esta es una aplicación para reservar hoteles de manera online / This is an appl
 
 ## Comenzando / Starting🚀
 
-Puedes ver la aplicación funcional ingresando al siguietne link: .................................
-You can see the aplication by entering the following link: link: ................................ 
+Puedes ver la aplicación funcional ingresando al siguiente link: https://no-country-g66-hotely.web.app
+You can see the aplication by entering the following link: link: https://no-country-g66-hotely.web.app
 
 
 
@@ -27,11 +27,11 @@ Install our project with npm
 
 ## Despliegue/ Deployment 📦
 
-1- Ingresa al siguiente link: .............................
+1- Ingresa al siguiente link: https://no-country-g66-hotely.web.app
  
 2- En caso de tenerlo en tu ordenador ejecuta el comando npm start en la terminal una vez que lo tengas abierto. Recuerda que deberás tener instaladas ciertas librerías (leer la sección: "Librerias instaladas").
 
-1- Enter the following link: ...............................
+1- Enter the following link: https://no-country-g66-hotely.web.app
 
 2- Execute the command npm start in the terminal once you have the proyect opened. Remember that you must have certain libraries installed (read the section: "Installed Libraries").
  
@@ -61,10 +61,10 @@ Install our project with npm
 ## Autores / Authors ✒️
 
 * **Ailen Olha** - *front-end* - [Github](https://github.com/ailenolha) [Linkedin](https://linkedin.com/in/ailenolha)
-* **Lisandro Perrotta** - *front-end* - [LisandroPer](https://github.com/LisandroPer)
-* **Braian Delgado** - *back-end* - []()
-* **Ignacio Lisandro Martín** - *back-end* - []()
-* **Brenda Nahomi Quispe Gonzales** - *full-stack* - []()
+* **Lisandro Perrotta** - *front-end* - [Github](https://github.com/LisandroPer) [LinkedIn](https://www.linkedin.com/in/lisandro-perrotta-8a5953228/)
+* **Braian Delgado** - *back-end* - [Github](https://github.com/Pr0vius) [LinkedIn](https://www.linkedin.com/in/braian-delgado/)
+* **Ignacio Lisandro Martín** - *back-end* - [Github](https://github.com/PhiNax) [LinkedIn](https://www.linkedin.com/in/phinax/)
+* **Brenda Nahomi Quispe Gonzales** - *full-stack* - [Github](https://github.com/AdnerbImohan1107) [LinkedIn](https://www.linkedin.com/in/brendanahomi/)
 
 * **César Carabetta** - *team-leader* - []()
 
@@ -72,6 +72,6 @@ Install our project with npm
 ## Agradecimientos 🎁
 
 
-* Agradecimientos a: No Country for Junior Devs 🤓.
+* Agradecimientos a No Country for Junior Devs 🤓.
 
 
