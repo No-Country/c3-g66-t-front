@@ -53,11 +53,11 @@ const Price = ( {price, minPrice, maxPrice, onChangeMinPrice, onChangeMaxPrice, 
             </div>
             <div className='flex flex-row items-center justify-start pl-5 pb-1 w-full gap-4'>
                 <div className="h-6 w-20 rounded shadow-md">
-                    <input className='p-2 h-full w-full bg-white border border-gray-400 rounded text-xs focus:outline-none' onInput={getMinPrice} type='number' min='0' placeholder='Mínimo' value={minPrice}/>
+                    <input className='p-2 h-full w-full bg-slate-50 border border-gray-400 rounded text-xs focus:outline-none' onInput={getMinPrice} type='number' min='0' placeholder='Mínimo' value={minPrice}/>
                 </div>
                 <span className='text-sm text-gray-400'>-</span>
                 <div className="h-6 w-20 rounded shadow-md">
-                    <input className='p-2 h-full w-full rounded bg-white border border-gray-400 text-xs focus:outline-none' onInput={getMaxPrice} type='number' min='0' placeholder='Máximo' value={maxPrice}/>
+                    <input className='p-2 h-full w-full rounded bg-slate-50 border border-gray-400 text-xs focus:outline-none' onInput={getMaxPrice} type='number' min='0' placeholder='Máximo' value={maxPrice}/>
                 </div>
             </div>
         </div>

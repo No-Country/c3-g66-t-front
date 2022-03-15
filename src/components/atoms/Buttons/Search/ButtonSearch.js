@@ -8,7 +8,6 @@ import { GetListHotelsAction } from '../../../../store/slices/search/ListHotelsR
 const Button = ( {location, checkin_date, checkout_date, adults_number, date, locationChange, checkinChange, checkoutChange, adults_numberChange} ) => {
 
     const { data } = useSelector( store => store.SearchLocationReducer );
-
     const dispatch = useDispatch(); 
     const navigate = useNavigate();
 
@@ -32,7 +31,7 @@ const Button = ( {location, checkin_date, checkout_date, adults_number, date, lo
     //Buscador
     useEffect( () => {
         dispatch(GetListHotelsAction({ data, page_number: 1 }));
-    }, [data] );
+    }, [dispatch, data] );
 
     return (
         <div className='container-search-button'>
