@@ -31,12 +31,12 @@
 
 .suggestionWrapper{
     @apply mt-72 absolute 
-    w-2/3 h-36 mb-28
-    sm:w-9/12 sm:h-40 sm:mb-24 sm:rounded-md
-    md:w-3/4 md:h-44 md:mb-20 
+    w-2/3 h-48 mb-16
+    sm:w-9/12 sm:h-32 sm:mb-32 sm:rounded-md
+    md:w-3/4 md:h-32 md:mb-32 
     lg:w-64 lg:h-48 lg:mb-16
-    xl:w-80 xl:h-56 xl:mb-6 xl:rounded-none
-    2xl:w-96;
+    xl:w-80 xl:h-52 xl:mb-10 xl:rounded-none
+    2xl:w-96 2xl:h-40 2xl:mb-24;
 }
 .suggestionWrapper{
     background-color: white;
